@@ -10,3 +10,6 @@ cascade:
 Welcome to my blog with some of my work in progress. I've been working on this book idea. You can read some of the chapters below.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat. 
+```
