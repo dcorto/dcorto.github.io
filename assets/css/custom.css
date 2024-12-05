@@ -1,0 +1,24 @@
+/* You can customize theme styles here */
+b,
+strong {
+    font-weight: bold;
+}
+
+html body ::selection{
+    background-color:#6897bb;
+    color:#fff;
+}
+
+.header .navbar-brand span:first-child{
+    color: #6897bb;
+    margin-right: 0.2em;
+}
+
+.header .container{
+    padding-left: 10px;
+}
+
+.profile-image img{
+    border-radius: 50%;
+}
+

@@ -1,71 +1,147 @@
-title = "Notre-Dame de Paris"
-baseURL = 'https://dcorto.github.io/'
-theme = 'ananke'
-resourceDir = "../resources"
+baseURL = "https://dcorto.github.io/"
+languageCode = "en"
+theme = "adritian-free-hugo-theme"
+# https://gohugo.io/content-management/taxonomies/
+disableKinds = ["taxonomy", "term"]
 
-defaultContentLanguage = "en"
-sectionPagesMenu = "main"
-enableRobotsTXT = false
-
-[services.googleAnalytics]
-id = ''
-
-[pagination]
-pagerSize = 3 # this is set low for demonstrating with dummy content. Set to a higher number
-
+[languages]
 [languages.en]
-contentDir = "content/en"
-languageCode = 'en-US'
-weight = 1
-title = "Ananke"
-# languageDirection = 'rtl' for Right-To-Left languages
+disabled = false
+languageCode = 'en'
+languageDirection = 'ltr'
+languageName = 'English'
+title = 'David Corto Camacho | Senior Software Engineer & Tech Lead at Deporvillage'
+weight = 0
 
-[languages.fr]
-contentDir = "content/fr"
-languageCode = 'fr-FR'
+[languages.en.menus]
+[[languages.en.menus.header]]
+name = 'Experience'
+URL = '#experience'
 weight = 2
-title = "Ananke Fr"
+[[languages.en.menus.header]]
+name = 'Education'
+URL = '#education'
+weight = 3
+[[languages.en.menus.header]]
+name = 'Testimonials'
+URL = '#testimonial'
+weight = 4
+#  [[languages.en.menus.header]]
+#  name = "Experience"
+#  URL = "#experience"
+#  weight = 4
+#[[languages.en.menus.header]]
+#name = "Blog"
+#URL = "/blog"
+#weight = 5
+#[[languages.en.menus.header]]
+#name = "Contact"
+#URL = "#contact"
+#weight = 6
 
-[sitemap]
-changefreq = "monthly"
-priority = 0.5
-filename = "sitemap.xml"
+[[languages.en.menus.footer]]
+name = "Experience"
+URL = "#experience"
+weight = 2
+[[languages.en.menus.footer]]
+name = "Education"
+URL = "#education"
+weight = 3
+[[languages.en.menus.footer]]
+name = 'Testimonials'
+URL = '#testimonial'
+weight = 4
+#[[languages.en.menus.footer]]
+#name = "Contact"
+#URL = "#contact"
+#weight = 4
+
+
+[languages.es]
+disabled = true
+languageCode = 'es'
+languageDirection = 'ltr'
+languageName = 'Español'
+title = ''
+weight = 0
+[[languages.es.menus.header]]
+name = 'Sobre mi'
+URL = '/es/#about'
+weight = 2
+[[languages.es.menus.header]]
+name = 'Portfolio'
+URL = '/es/#portfolio'
+weight = 3
+
+#  [[languages.es.menus.header]]
+#  name = "Experiencia"
+#  URL = "/es/#experience"
+#  weight = 4
+
+[[languages.es.menus.header]]
+name = "Blog"
+URL = "/es/blog"
+weight = 5
+
+[[languages.es.menus.header]]
+name = "Contacto"
+URL = "/es/#contact"
+weight = 6
+
+[[languages.es.menus.footer]]
+name = "Sobre mi"
+URL = "/es/#about"
+weight = 2
+
+[[languages.es.menus.footer]]
+name = "Portfolio"
+URL = "/es/#portfolio"
+weight = 3
+
+[[languages.es.menus.footer]]
+name = "Contact"
+URL = "/es/#contact"
+weight = 4
+
+# Plugins
+[params.plugins]
+
+# CSS Plugins
+[[params.plugins.css]]
+URL = "css/main.css"
+[[params.plugins.css]]
+URL = "css/adritian-icons.css"
+[[params.plugins.css]]
+URL = "css/custom.css"
+
+# JS Plugins
+[[params.plugins.js]]
+URL = "js/rad-animations.js"
+[[params.plugins.js]]
+URL = "js/sticky-header.js"
+[[params.plugins.js]]
+URL = "js/library/fontfaceobserver.js"
+
+# SCSS Plugins
+[[params.plugins.scss]]
+URL = "css/menu.scss"
 
 [params]
-text_color = ""
-author = ""
-favicon = ""
-site_logo = ""
-description = "The last theme you'll ever need. Maybe."
-# choose a background color from any on this page: https://tachyons.io/docs/themes/skins/ and preface it with "bg-"
-background_color_class = "bg-black"
-# choose fitting and alignment styles for the featured image using Tachyons classes such as "cover|contain" for fitting and "bg-top|bg-center|bg-bottom" for alignment, or add any other class space-separated to customize further
-featured_image_class = "cover bg-top"
-# choose a color dimming class for the page or site header from any on this page: https://tachyons.io/docs/themes/skins/, preface it with "bg-" and add the value such as "-X0" where X is in [1,9]
-cover_dimming_class = "bg-black-60"
-recent_posts_number = 3
 
-[params.ananke.social.share]
-networks = [
-    "email",
-    "facebook",
-    "bluesky",
-    "linkedin"
-]
+#sections = ["showcase", "about", "education", "experience", "client-and-work", "testimonial", "contact", "newsletter"]
+sections = ["showcase", "experience", "education", "client-and-work", "testimonial"]
 
-[params.ananke.social.follow]
-networks = [
-    "facebook",
-    "bluesky",
-    "linkedin"
-]
+homepageExperienceCount = 3
 
-[params.ananke.social.facebook]
-username = "patrick.kollitsch"
-# profilelink = "https://www.facebook.com/patrick.kollitsch"
+# controls vercel page insights - disabled by default
+vercelPageInsights = false
+vercelAnalytics = false
 
-[params.ananke.social.linkedin]
-username = "patrickkollitsch"
+[params.google_analytics]
+code = "UA-XXXXX-Y"
+enabled = false
 
-[params.ananke.social.bluesky]
-username = "kollitsch.dev"
+[params.google_tag_manager]
+code = "GTM-XXXXX"
+enabled = false
+
