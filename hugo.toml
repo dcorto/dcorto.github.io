@@ -2,7 +2,8 @@ baseURL = "https://dcorto.github.io/"
 languageCode = "en"
 theme = "adritian-free-hugo-theme"
 # https://gohugo.io/content-management/taxonomies/
-disableKinds = ["taxonomy", "term"]
+disableKinds = ["taxonomy", "term", "rss"]
+enableRobotsTXT = true
 
 [languages]
 [languages.en]
