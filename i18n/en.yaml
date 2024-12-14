@@ -1,0 +1,172 @@
+## Header
+- id: "logo_text1"
+  translation: "David"
+
+- id: "logo_text2"
+  translation: "Corto Camacho"
+
+## Footer
+- id: "footer_notice"
+  translation: "&copy; David Corto Camacho. Powered by <a href='https://gohugo.io/ target='_blank>Hugo</a> using theme <a href='https://github.com/zetxek/adritian-free-hugo-theme' target='_blank'>Adritian</a>"
+
+- id: "language"
+  translation: "Language"
+
+## Homepage head title
+- id: "head_title"
+  translation: "David Corto Camacho | Senior Software Engineer & Tech Lead at Deporvillage"
+
+- id: "head_description"
+  translation: "David Corto Camacho | Senior Software Engineer & Tech Lead at Deporvillage"
+
+## Homepage showcase
+- id: "showcase_title"
+  translation: "Hello, I’m David"
+
+- id: "showcase_subtitle"
+  translation: "Senior Software Engineer"
+
+- id: "showcase_description"
+  translation: <p class="lead">
+    I'm a Senior Software Engineer with a strong background in leading technical teams and developing robust, scalable software solutions. Currently, I'm the <strong>Tech Lead</strong> for the product catalog at <a href="https://www.deporvillage.com" target="_blank">Deporvillage</a>, where I'm responsible for guiding and executing the <strong>technical vision</strong> for this critical area of the platform.
+    </p>
+    <p class="lead">
+    My expertise lies in designing and implementing microservices within complex architectural landscapes. 
+    I have a keen interest in <strong>SRE</strong> and <strong>DevOps</strong> principles, constantly seeking to improve operational efficiency and 
+    reliability through automation and best practices.
+    </p>
+    <p class="lead">
+    I'm a highly motivated and results-oriented individual with a strong desire for <strong>continuous learning</strong> and 
+    improvement. I'm eager to apply new technologies and methodologies to enhance the quality and performance of 
+    the software I develop.
+    </p>
+
+- id: "showcase_button"
+  translation: "LinkedIn"
+
+  ## not visible but used for accessibility
+- id: "showcase_image_alt"
+  translation: "A picture of Cool Name"
+
+## Homepage about
+- id: "about_title"
+  translation: "Who am I?"
+
+- id: "about_content"
+  translation:  <p class="lead">
+      Here you can add some information about you. A small excerpt that describes 
+      your experience, for example.   
+      </p>
+      <p class="lead">
+      You explain something about your academic/study background, as well as your
+      preferred areas of work. Think of this area as context-setting for the experience
+      that you will describe below. Why did you change jobs? What drove you to take a 
+      new gig? Even if you are not looking for a job, it's a good way to hint about
+      what kind of projects you are interested in.
+    </p>
+
+- id: "about_button"
+  translation: "About Me"
+
+## Homepage education
+- id: "education_title"
+  translation: "Education"
+
+## Homepage experience
+- id: "experience_title"
+  translation: "Experience"
+
+- id: "experience_description"
+  translation: "Here a list of my professional experience along with the companies I've worked for and the projects I've been involved in. Also you can check my LinkedIn profile."
+
+- id: "experience_button"
+  translation: "LinkedIn" 
+
+- id: "experience_button_url"
+  translation: "https://www.linkedin.com/in/davidcortocamacho/"
+
+- id: "experience_button2"
+  translation: "GitHub"
+
+- id: "experience_button2_url"
+  translation: "https://github.com/dcorto"
+
+- id: "experience_button3"
+  translation: "View all"
+
+- id: "experience_button3_url"
+  translation: "/experience"
+
+## Homepage client & work
+- id: "client_work_title"
+  translation: "Clients & Work"
+
+## Homepage newsletter
+- id: "newsletter_title"
+  translation: "Newsletter"
+
+- id: "newsletter_button"
+  translation: "Subscribe"
+
+- id: "newsletter_placeholder"
+  translation: "Your email"
+
+- id: "newsletter_success_message"
+  translation: "Thank you for subscribing to my newsletter!"
+
+- id: "newsletter_error_message"
+  translation: "An error occurred. Please try again."
+
+- id: "newsletter_note"
+  translation: "We'll never share your email with anyone else."
+
+## Homepage testimonials
+- id: "testimonials_title"
+  translation: "Testimonials"
+
+## Homepage contact
+- id: "contact_title"
+  translation: "Contact"
+
+- id: "contact_button"
+  translation: "Send message"
+
+- id: "contact_form_name"
+  translation: "Full Name"
+
+- id: "contact_form_email"
+  translation: "Email Address"
+
+- id: "contact_form_message"
+  translation: "Type Your Message Here"
+
+- id: "contact_phone_title"
+  translation: "Phone Number"
+
+- id: "contact_phone_number"
+  translation: "+555 (11) 123 44 55"
+
+- id: "contact_email_title"
+  translation: "Email"
+
+- id: "contact_email_email"
+  translation: '<a href="mailto:mail@example.com">mail@example.com</a>'
+
+- id: "contact_address_title"
+  translation: "Address"
+
+- id: "contact_address_address"
+  translation: "Exact street/neighborhood (you can omit this)<br />Postcode, City"
+
+- id: "contact_button"
+  translation: "Send Message"
+
+## Blog
+- id: "read_more"
+  translation: "Read more"
+
+- id: "published_on"
+  translation: "Published en"
+
+- id: "continue_reading"
+  translation: "Continue reading"

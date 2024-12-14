@@ -1,0 +1,84 @@
+## Looking for strings? Check the i18n folder.
+
+# showcase
+showcase:
+  enable: true
+  image:
+    x: "images/showcase/showcase.png"
+    _2x: "images/showcase/showcase@2x.png"
+  imageMobile:
+    x: "images/showcase/showcase-mobile.jpg"
+
+  button:
+    icon: "icon-linkedin"
+    URL: "https://www.linkedin.com/in/davidcortocamacho"
+
+  socialLinks:
+    - icon: "linkedin"
+      URL: "https://linkedin.com/in/davidcortocamacho/"
+
+    - icon: "square-github"
+      URL: "https://github.com/DCorto"
+
+    - icon: "x-twitter"
+      URL: "https://twitter.com/davidcorto"
+
+    - icon: "bluesky"
+      URL: "https://bsky.app/profile/davidcorto.bsky.social"
+
+# about
+about:
+  enable: false
+  button:
+    icon: "icon-user"
+    URL: "https://www.linkedin.com/in/adrianmoreno/"
+  image:
+    x: "images/about/user-picture.png"
+    _2x: "images/about/user-picture@2x.png"
+
+# education
+education:
+  enable: true
+  items:
+    - university: "University of Barcelona, Barcelona"
+      year: "2010-2014"
+      degree: "Computer Engineering"
+
+    - university: "IES Thos i Codina, Mataró"
+      year: "2009-2010"
+      degree: "High-Level Technical Degree in Software Development"
+
+    - university: "IES Thos i Codina, Mataró"
+      year: "2005-2007"
+      degree: "High-Level Technical Degree in Computer Systems Administration"
+
+# experience
+## to hiden a button, set the icon to an empty string
+experience:
+  enable: true
+  button:
+    icon: "icon-linkedin"
+  button2:
+    icon: "icon-square-github"
+  button3:
+    icon: ""
+
+# Client & Work
+client_and_work:
+  enable: false
+
+# testimonial
+testimonial:
+  enable: true
+
+# contact
+contact:
+  enable: false
+  form:
+    action: "#"
+  button:
+    icon: "icon-email"
+
+# newsletter
+newsletter:
+  enable: false
