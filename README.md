@@ -1,3 +1,8 @@
-# dcorto.github.io
+# dcorto.github.io - [https://davidcorto.es](https://davidcorto.es)
 
-Testing hugo.io with github pages and actions
+## About
+
+This is my personal website. It is built with [HUGO](https://gohugo.io) using the theme [Adritian](https://github.com/zetxek/adritian-free-hugo-theme) and hosted on GitHub Pages.
+
+
+
