@@ -5,6 +5,13 @@ theme = "adritian-free-hugo-theme"
 disableKinds = ["taxonomy", "term", "rss"]
 enableRobotsTXT = true
 
+[build]
+    [build.buildStats]
+        disableClasses = false
+        disableIDs = false
+        disableTags = false
+        enable = true
+
 [languages]
 [languages.en]
 disabled = false
@@ -107,42 +114,44 @@ weight = 4
 # Plugins
 [params.plugins]
 
-# CSS Plugins
-[[params.plugins.css]]
-URL = "css/main.css"
-[[params.plugins.css]]
-URL = "css/adritian-icons.css"
-[[params.plugins.css]]
-URL = "css/custom.css"
+  # CSS Plugins
+  [[params.plugins.css]]
+  URL = "css/main.css"
+  [[params.plugins.css]]
+  URL = "css/adritian.css"
+  [[params.plugins.css]]
+  URL = "css/adritian-icons.css"
+  [[params.plugins.css]]
+  URL = "css/custom.css"
 
-# JS Plugins
-[[params.plugins.js]]
-URL = "js/rad-animations.js"
-[[params.plugins.js]]
-URL = "js/sticky-header.js"
-[[params.plugins.js]]
-URL = "js/library/fontfaceobserver.js"
+  # JS Plugins
+  [[params.plugins.js]]
+  URL = "js/rad-animations.js"
+  [[params.plugins.js]]
+  URL = "js/sticky-header.js"
+  [[params.plugins.js]]
+  URL = "js/library/fontfaceobserver.js"
 
-# SCSS Plugins
-[[params.plugins.scss]]
-URL = "css/menu.scss"
+  # SCSS Plugins
+  [[params.plugins.scss]]
+  URL = "scss/menu.scss"
+  [[params.plugins.scss]]
+  URL = "scss/bootstrap/bootstrap.scss"
 
 [params]
 
 #sections = ["showcase", "about", "education", "experience", "client-and-work", "testimonial", "contact", "newsletter"]
-sections = ["showcase", "experience", "education", "client-and-work", "testimonial"]
+  sections = ["showcase", "experience", "education", "client-and-work", "testimonial"]
 
-homepageExperienceCount = 3
+  homepageExperienceCount = 3
 
 # controls vercel page insights - disabled by default
-vercelPageInsights = false
-vercelAnalytics = false
+  vercelPageInsights = false
+  vercelAnalytics = false
 
-[params.google_analytics]
-code = "UA-XXXXX-Y"
-enabled = false
-
-[params.google_tag_manager]
-code = "GTM-XXXXX"
-enabled = false
-
+  [params.google_analytics]
+      code = "UA-XXXXX-Y"
+      enabled = false
+  [params.google_tag_manager]
+      code = "GTM-XXXXX"
+      enabled = false
