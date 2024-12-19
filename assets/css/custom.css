@@ -18,6 +18,12 @@ html body ::selection{
     padding-left: 10px;
 }
 
+@media (max-width: 768px) {
+    .profile-image {
+        margin-bottom: 2em;
+    }
+}
+
 .profile-image img{
     border-radius: 50%;
 }
