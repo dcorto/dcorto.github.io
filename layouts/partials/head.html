@@ -19,7 +19,8 @@
 {{ end }}
 <meta name="generator-mode" content='{{ hugo.Environment }}'>
 {{- $critical := resources.Get "css/critical.css" | resources.Minify }}
-<style data-generator="critical-css">{{- $critical.Content | safeCSS }}
+<style data-generator="critical-css">
+{{- $critical.Content | safeCSS }}
 </style>
 
 {{- $cssResources := slice }}
@@ -77,3 +78,4 @@
 {{- end }}
 <script src='{{ "js/library/lozad.min.js" | absURL }}'></script>
 
+{{ template "_internal/opengraph.html" . }}

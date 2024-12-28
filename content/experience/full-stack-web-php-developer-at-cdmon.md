@@ -2,6 +2,7 @@
 date: 2015-02-01T00:00:00+01:00
 draft: false
 title: "Full Stack Web PHP Developer"
+description: "Lead developer of all e-commerce and marketing platforms."
 jobTitle: "Full Stack Web PHP Developer"
 company: "CDmon (10dencehispahard S.L.)"
 location: "Malgrat de Mar, Barcelona"

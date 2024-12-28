@@ -2,6 +2,7 @@
 date: 2016-03-01T00:00:00+01:00
 draft: false
 title: "Team Lead / CIO / Senior PHP Developer"
+description: "Lead web developer of e-commerce, cloud and other online projects of the company."
 jobTitle: "Team Lead / CIO / Senior PHP Developer"
 company: "TwoNav"
 location: "Arenys de Mar, Barcelona"
