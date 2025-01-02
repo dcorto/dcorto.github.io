@@ -12,6 +12,9 @@ enableRobotsTXT = true
     disableTags = false
     enable = true
 
+[params.languages.selector.disable]
+  footer = false
+
 [languages]
   [languages.en]
   disabled = false
@@ -115,23 +118,38 @@ enableRobotsTXT = true
 [params.plugins]
   # CSS Plugins
   [[params.plugins.css]]
-    URL = "css/main.css"
+  URL = "css/custom.css"
   [[params.plugins.css]]
-    URL = "css/custom.css"
-  [[params.plugins.css]]
-    URL = "css/adritian-icons.css"
+  URL = "css/adritian-icons.css"
 
   # JS Plugins
   [[params.plugins.js]]
-    URL = "js/rad-animations.js"
+  URL = "js/rad-animations.js"
   [[params.plugins.js]]
-    URL = "js/sticky-header.js"
+  URL = "js/sticky-header.js"
   [[params.plugins.js]]
-    URL = "js/library/fontfaceobserver.js"
+  URL = "js/library/fontfaceobserver.js"
 
   # SCSS Plugins
   [[params.plugins.scss]]
-    URL = "scss/adritian.scss"
+  URL = "scss/adritian.scss"
+
+# theme/color style
+[params.colorTheme]
+
+## the following configuration would disable automatic theme selection
+#  [params.colorTheme.auto]
+#    disable = true
+#  [params.colorTheme.forced]
+#    theme = "dark"
+
+## the following parameter will disable theme override in the footer
+#  [params.colorTheme.selector.disable]
+#  footer = true
+
+
+## by default we allow override AND automatic selection
+
 
 [params]
   # Open Graph

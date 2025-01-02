@@ -12,6 +12,18 @@
 - id: "language"
   translation: "Language"
 
+- id: "toggle_theme"
+  translation: "Toggle theme"
+
+- id: "theme_light"
+  translation: "☀️ Light"
+
+- id: "theme_dark"
+  translation: "🌑 Dark"
+
+- id: "theme_auto"
+  translation: "✨ Auto"
+
 ## Homepage head title
 - id: "head_title"
   translation: "David Corto Camacho | Senior Software Engineer & Tech Lead at Deporvillage"
