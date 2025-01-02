@@ -28,3 +28,7 @@ html body ::selection{
     border-radius: 50%;
 }
 
+.footer__copy {
+    white-space: wrap !important;
+}
+
