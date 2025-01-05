@@ -89,7 +89,7 @@
   translation: "Experience"
 
 - id: "experience_description"
-  translation: "Here a list of my professional experience along with the companies I've worked for and the projects I've been involved in. Also you can check my LinkedIn profile."
+  translation: "Here a list of my professional experience along with the companies I've worked for and the projects I've been involved in. Also you can check my LinkedIn and GitHub profiles."
 
 - id: "experience_button"
   translation: "LinkedIn" 

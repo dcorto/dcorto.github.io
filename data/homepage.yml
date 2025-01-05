@@ -57,10 +57,13 @@ education:
 experience:
   enable: true
   button:
+    enable: true
     icon: "icon-linkedin"
   button2:
+    enable: true
     icon: "icon-square-github"
   button3:
+    enable: false
     icon: ""
 
 # Client & Work
