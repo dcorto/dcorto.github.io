@@ -5,6 +5,34 @@ theme = "adritian-free-hugo-theme"
 disableKinds = ["taxonomy", "term", "rss"]
 enableRobotsTXT = true
 
+[params]
+
+  # Open Graph
+  images = ['/android-chrome-512x512.png']
+
+  sections = ["showcase", "experience", "education", "client-and-work", "testimonial"]
+
+  homepageExperienceCount = 3
+
+  [params.analytics]
+  ## Analytics parameters.
+  ### Supported so far: Vercel (Page Insights, Analytics)
+  ### And Google (Tag Manager, Analytics)
+
+  # controls vercel page insights - disabled by default
+  # to enable, just set to true
+  vercelPageInsights = false
+  vercelAnalytics = false
+
+  # google analytics and tag manager. to enable, set "enabled" to true
+  # and add the tracking code (UA-something for analytics, GTM-something for tag manager)
+  [params.analytics.googleAnalytics]
+      code = "UA-XXXXX-Y"
+      enabled = false
+  [params.analytics.googleTagManager]
+      code = "GTM-XXXXX"
+      enabled = false
+
 [build]
   [build.buildStats]
     disableClasses = false
@@ -116,6 +144,7 @@ enableRobotsTXT = true
 
 # Plugins
 [params.plugins]
+
   # CSS Plugins
   [[params.plugins.css]]
   URL = "css/custom.css"
@@ -134,6 +163,7 @@ enableRobotsTXT = true
   [[params.plugins.scss]]
   URL = "scss/adritian.scss"
 
+
 # theme/color style
 [params.colorTheme]
 
@@ -149,24 +179,3 @@ enableRobotsTXT = true
 
 
 ## by default we allow override AND automatic selection
-
-
-[params]
-  # Open Graph
-  images = ['/android-chrome-512x512.png']
-
-  #sections = ["showcase", "about", "education", "experience", "client-and-work", "testimonial", "contact", "newsletter"]
-  sections = ["showcase", "experience", "education", "client-and-work", "testimonial"]
-
-  homepageExperienceCount = 3
-
-  # controls vercel page insights - disabled by default
-  vercelPageInsights = false
-  vercelAnalytics = false
-
-  [params.google_analytics]
-    code = "UA-XXXXX-Y"
-    enabled = false
-  [params.google_tag_manager]
-    code = "GTM-XXXXX"
-    enabled = false

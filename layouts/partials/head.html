@@ -3,10 +3,23 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 <meta name="theme-color" content="#478079"/>
 
-{{- if .Site.Params.analytics.google_tag_manager.enabled }}
+{{- if .Site.Params.analytics.googleTagManager.enabled }}
 <link rel="preconnect" href="https://www.googletagmanager.com">
 {{- end }}
-<!-- endinject -->
+{{- if .Site.Params.analytics.googleAnalytics.enabled }}
+{{- if .Site.Params.analytics.googleAnalytics.code}}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.analytics.googleAnalytics.code }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ .Site.Params.analytics.googleAnalytics.code}} ');
+</script>
+{{- end }}
+{{- end }}
+
 {{ if not .Params.seo.title }}
 <title>{{ i18n "head_title" }}</title>
 {{ else }}
@@ -32,14 +45,6 @@
         {{- $cssResources = $cssResources | append $cssFile }}
     {{- end }}
 {{- end }}
-{{- range .Site.Params.plugins.scss }}
-  {{- $scss := resources.Get .URL }}
-  {{- $style := $scss | css.Sass }}
-  {{- if hugo.IsProduction }}
-    {{- $style = $scss | css.Sass | resources.Minify | resources.Fingerprint }}
-  {{- end }}
-  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous"/>
-{{- end }}
 
 {{- $cssBundle := $cssResources | resources.Concat "css/bundle.css" }}
 
@@ -52,16 +57,16 @@
   href="{{ $css.RelPermalink }}"
   as="style"
   onload="this.onload=null;this.rel='stylesheet'"
-  {{ if hugo.IsProduction -}} 
+  {{ if hugo.IsProduction -}}
     integrity="{{ $css.Data.Integrity }}"
     crossorigin="anonymous"
   {{- end }}
 />
 <noscript>
-  <link 
+  <link
     rel="stylesheet"
     href="{{ $css.RelPermalink }}"
-    {{ if hugo.IsProduction -}} 
+    {{ if hugo.IsProduction -}}
     integrity="{{ $css.Data.Integrity }}"
     crossorigin="anonymous"
     {{- end }}
@@ -90,7 +95,7 @@
 
 {{- if .Site.Params.analytics.google_tag_manager.enabled }}
 <!-- Google tag (gtag.js), google analytics -->
-<script defer src="https://www.googletagmanager.com/gtag/js?id=UA-465407-4"></script>
+<script defer src="https://www.googletagmanager.com/gtag/js?id={{.Site.Params.analytics.google_tag_manager.code}}"></script>
 {{- $analytics := resources.Get "js/gtag.js" | resources.Minify }}
 <script defer src="{{ $analytics.Permalink }}"></script>
 {{- else }}
