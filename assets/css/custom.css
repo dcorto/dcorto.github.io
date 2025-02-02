@@ -10,8 +10,8 @@ html body ::selection{
 }
 
 .header .navbar-brand span:first-child{
-    color: #6897bb;
-    margin-right: 0.2em;
+    color: #6897bb !important;
+    margin-right: 0.2em !important;
 }
 
 .header .container{
