@@ -11,6 +11,10 @@ enableRobotsTXT = true
     path = "github.com/zetxek/adritian-free-hugo-theme"
 
 [[module.mounts]]
+source = 'assets'
+target = 'assets'
+
+[[module.mounts]]
 source = "node_modules/bootstrap/scss"
 target = "assets/scss/bootstrap"
 
@@ -158,6 +162,10 @@ target = "assets/js/vendor/bootstrap.bundle.min.js"
   name = "Contact"
   URL = "/es/#contact"
   weight = 4
+
+# Experience
+[params.experience]
+  showJobCard = true  # Set to false for hide the job card
 
 # Plugins
 [params.plugins]

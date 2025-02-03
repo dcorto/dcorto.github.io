@@ -1,7 +1,8 @@
 /* You can customize theme styles here */
-b,
-strong {
-    font-weight: bold;
+
+/* general */
+b, strong {
+    font-weight: bold !important;
 }
 
 html body ::selection{
@@ -9,6 +10,16 @@ html body ::selection{
     color:#fff;
 }
 
+p a:hover, span a:hover {
+    color: #6897bb !important;
+}
+
+.section li {
+    color: rgba(0, 0, 0, 1) !important;
+}
+
+
+/* header */
 .header .navbar-brand span:first-child{
     color: #6897bb !important;
     margin-right: 0.2em !important;
@@ -30,5 +41,23 @@ html body ::selection{
 
 .footer__copy {
     white-space: wrap !important;
+}
+
+/* experience background color */
+.experience.selected a,
+.experience:hover a,
+.experience:active a,
+.experience a:hover,
+.experience a:active {
+    background-color: #6897bb !important;
+}
+
+div.experience__company {
+    color: #6897bb !important;
+}
+
+/* fix h3 links color */
+section#experience div#main-content h3 a {
+    color: #6897bb !important;
 }
 
