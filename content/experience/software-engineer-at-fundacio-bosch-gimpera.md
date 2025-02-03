@@ -1,7 +1,7 @@
 ---
 date: 2014-06-01T00:00:00+01:00
 draft: false
-title: "Software Engineer"
+title: "Fundació Bosch i Gimpera"
 description: "In collaboration with the University of Barcelona. My main responsibilities were as the project manager, systems architect and web developer for develop a new tool for internal management of a rice company."
 jobTitle: "Software Engineer"
 company: "Fundació Bosch i Gimpera"

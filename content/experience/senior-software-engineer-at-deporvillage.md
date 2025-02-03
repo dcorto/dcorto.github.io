@@ -1,15 +1,15 @@
 ---
 date: 2019-06-01T00:00:00+01:00
 draft: false
-title: "Senior Software Engineer & Tech Lead"
-description: "Leading the development of the product catalog at Deporvillage."
+title: "Deporvillage"
+description: "Leading the development of the product catalog at Deporvillage"
 jobTitle: "Senior Software Engineer & Tech Lead"
 company: "Deporvillage"
 location: "Barcelona"
 duration: "June 2019 - Present"
 seo:
     title: "Experience as a Senior Software Engineer & Tech Lead at Deporvillage"
-    description: "Leading the development of the product catalog at Deporvillage."
+    description: "Leading the development of the product catalog at Deporvillage"
 ---
 
 ### Tech Lead at [Deporvillage](https://www.deporvillage.com/)
@@ -19,6 +19,7 @@ As a Tech Lead, I have the oversight of the catalog development team at Deporvil
 - **Designing** and maintaining the platform's architecture.
 - **Enforcing** code quality standards.
 - **Collaborating** with cross-functional teams to drive platform improvements.
+
 
 
 ### Senior Backend Developer at [Deporvillage](https://www.deporvillage.com/)
