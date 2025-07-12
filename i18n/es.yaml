@@ -1,40 +1,64 @@
 ## Header
 - id: "logo_text1"
-  translation: "Genial"
+  translation: "David"
 
 - id: "logo_text2"
-  translation: "Nombre"
+  translation: "Corto Camacho"
 
 ## Footer
 - id: "footer_notice"
-  translation: "© Adritian. Tema gratuito de Hugo por Adrián Moreno Peña."
+  translation: "&copy; David Corto Camacho. Powered by <a href='https://gohugo.io/' target='_blank'>Hugo</a> using theme <a href='https://github.com/zetxek/adritian-free-hugo-theme' target='_blank'>Adritian</a>"
 
 - id: "language"
   translation: "Idioma"
 
+- id: "toggle_theme"
+  translation: "Cambiar tema"
+
+- id: "theme_light"
+  translation: "☀️ Claro"
+
+- id: "theme_dark"
+  translation: "🌑 Oscuro"
+
+- id: "theme_auto"
+  translation: "✨ Auto"
+
 ## Homepage head title
 - id: "head_title"
-  translation: "Sitio demo de Adritian - un tema Hugo de alto rendimiento por Adrián Moreno"
+  translation: "David Corto Camacho | Senior Software Engineer & Tech Lead en Deporvillage"
 
 - id: "head_description"
-  translation: "Este tema de Hugo (Adritian) está basado en Bootstrap y tiene características que lo hacen adecuado para un sitio personal, un portafolio u otros tipos de aplicaciones de una sola página."
+  translation: "David Corto Camacho | Senior Software Engineer & Tech Lead an Deporvillage"
 
 ## Homepage showcase
 - id: "showcase_title"
-  translation: "Hola, soy Cool."
+  translation: "Hola, soy David"
 
 - id: "showcase_subtitle"
-  translation: "Este es mi título"
+  translation: "Senior Software Engineer"
 
 - id: "showcase_description"
-  translation: "Este es un buen lugar para comenzar con una introducción sobre ti mismo. Tal vez una mención al lugar <a target='_blank' href='https://www.adrianmoreno.info/'>donde trabajas</a>. También puedes mencionar dónde vives, tu formación y cuál es el propósito del sitio. <br>Puedes descargar este tema desde <a target='_blank' href='https://github.com/zetxek/adritian-free-hugo-theme'>github</a>, y verlo en vivo <a target='_blank' href='https://adritian-demo.vercel.app//'>como un sitio demo</a> o <a target='_blank' href='https://www.adrianmoreno.info'>uno real</a>.<br>Puedes encontrar este contenido para editar en el archivo theme.yaml."
+  translation: <p class="lead">
+    I'm a Senior Software Engineer with a strong background in leading technical teams and developing robust, scalable software solutions. Currently, I'm the <strong>Tech Lead</strong> for the product catalog at <a href="https://www.deporvillage.com" target="_blank">Deporvillage</a>, where I'm responsible for guiding and executing the <strong>technical vision</strong> for this critical area of the platform.
+    </p>
+    <p class="lead">
+    My expertise lies in designing and implementing microservices within complex architectural landscapes.
+    I have a keen interest in <strong>SRE</strong> and <strong>DevOps</strong> principles, constantly seeking to improve operational efficiency and
+    reliability through automation and best practices.
+    </p>
+    <p class="lead">
+    I'm a highly motivated and results-oriented individual with a strong desire for <strong>continuous learning</strong> and
+    improvement. I'm eager to apply new technologies and methodologies to enhance the quality and performance of
+    the software I develop.
+    </p>
 
 - id: "showcase_button"
-  translation: "Contactar"
+  translation: "LinkedIn"
 
   ## not visible but used for accessibility
 - id: "showcase_image_alt"
-  translation: "A picture of Cool Name"
+  translation: "Imagen de David Corto Camacho"
 
 ## Homepage about
 - id: "about_title"
@@ -64,25 +88,31 @@
   translation: "Experiencia"
 
 - id: "experience_description"
-  translation: "Aquí es donde puedes resaltar un poco sobre tu experiencia. Años de experiencia total, especialización, etc."
+  translation: "Here a list of my professional experience along with the companies I've worked for and the projects I've been involved in. Also you can check my LinkedIn and GitHub profiles."
 
 - id: "experience_button"
   translation: "LinkedIn" 
 
 - id: "experience_button_url"
-  translation: "https://www.linkedin.com/in/adrianmoreno/"
+  translation: "https://www.linkedin.com/in/davidcortocamacho/"
 
 - id: "experience_button2"
-  translation: "Descargar mi CV"
+  translation: "GitHub"
 
 - id: "experience_button2_url"
-  translation: "Descargar mi CV"
+  translation: "https://github.com/dcorto"
 
 - id: "experience_button3"
   translation: "Ver todo"
 
 - id: "experience_button3_url"
   translation: "/es/experience"
+
+- id: "experience_and"
+  translation: "Y"
+
+- id: "experience_more"
+  translation: "más"
 
 ## Homepage client & work
 - id: "client_work_title"
@@ -157,3 +187,6 @@
 
 - id: "continue_reading"
   translation: "Continuar leyendo"
+
+- id: "words"
+  translation: "Palabras"

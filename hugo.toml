@@ -77,91 +77,70 @@ target = "assets/js/vendor/bootstrap.bundle.min.js"
   [[languages.en.menus.header]]
   name = 'Experience'
   URL = '#experience'
-  weight = 2
+  weight = 1
   [[languages.en.menus.header]]
   name = 'Education'
   URL = '#education'
-  weight = 3
+  weight = 2
   [[languages.en.menus.header]]
   name = 'Testimonials'
   URL = '#testimonial'
+  weight = 3
+  [[languages.en.menus.header]]
+  name = "Blog"
+  URL = "/es/blog"
   weight = 4
-  #  [[languages.en.menus.header]]
-  #  name = "Experience"
-  #  URL = "#experience"
-  #  weight = 4
-  #[[languages.en.menus.header]]
-  #name = "Blog"
-  #URL = "/blog"
-  #weight = 5
-  #[[languages.en.menus.header]]
-  #name = "Contact"
-  #URL = "#contact"
-  #weight = 6
 
   [[languages.en.menus.footer]]
   name = "Experience"
   URL = "#experience"
-  weight = 2
+  weight = 1
   [[languages.en.menus.footer]]
   name = "Education"
   URL = "#education"
-  weight = 3
+  weight = 2
   [[languages.en.menus.footer]]
   name = 'Testimonials'
   URL = '#testimonial'
-  weight = 4
-  #[[languages.en.menus.footer]]
-  #name = "Contact"
-  #URL = "#contact"
-  #weight = 4
-
+  weight = 3
 
   [languages.es]
-  disabled = true
+  disabled = false
   languageCode = 'es'
   languageDirection = 'ltr'
   languageName = 'Español'
-  title = ''
-  weight = 0
+  title = 'David Corto Camacho | Senior Software Engineer & Tech Lead en Deporvillage'
+  weight = 1
+  contentDir = 'content/es'
   [[languages.es.menus.header]]
-  name = 'Sobre mi'
-  URL = '/es/#about'
+  name = 'Experiencia'
+  URL = '/es/#experience'
+  weight = 1
+  [[languages.es.menus.header]]
+  name = 'Formación'
+  URL = '/es/#education'
   weight = 2
   [[languages.es.menus.header]]
-  name = 'Portfolio'
-  URL = '/es/#portfolio'
+  name = 'Recomendaciones'
+  URL = '/es/#testimonial'
   weight = 3
-
-  #  [[languages.es.menus.header]]
-  #  name = "Experiencia"
-  #  URL = "/es/#experience"
-  #  weight = 4
-
   [[languages.es.menus.header]]
   name = "Blog"
   URL = "/es/blog"
-  weight = 5
-
-  [[languages.es.menus.header]]
-  name = "Contacto"
-  URL = "/es/#contact"
-  weight = 6
-
-  [[languages.es.menus.footer]]
-  name = "Sobre mi"
-  URL = "/es/#about"
-  weight = 2
-
-  [[languages.es.menus.footer]]
-  name = "Portfolio"
-  URL = "/es/#portfolio"
-  weight = 3
-
-  [[languages.es.menus.footer]]
-  name = "Contact"
-  URL = "/es/#contact"
   weight = 4
+
+  [[languages.es.menus.footer]]
+  name = "Experiencia"
+  URL = "/es/#experience"
+  weight = 1
+  [[languages.es.menus.footer]]
+  name = "Formación"
+  URL = "/es/#education"
+  weight = 3
+  [[languages.es.menus.footer]]
+  name = "Recomendaciones"
+  URL = "/es/#testimonial"
+  weight = 3
 
 # Experience
 [params.experience]
