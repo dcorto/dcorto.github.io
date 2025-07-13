@@ -40,17 +40,15 @@
 
 - id: "showcase_description"
   translation: <p class="lead">
-    I'm a Senior Software Engineer with a strong background in leading technical teams and developing robust, scalable software solutions. Currently, I'm the <strong>Tech Lead</strong> for the product catalog at <a href="https://www.deporvillage.com" target="_blank">Deporvillage</a>, where I'm responsible for guiding and executing the <strong>technical vision</strong> for this critical area of the platform.
+    Soy Ingeniero de Software Senior con una sólida experiencia en liderar equipos técnicos y desarrollar soluciones de software robustas y escalables. Actualmente, soy <strong>Tech Lead</strong> en el equipo de catálogo en <a href="https://www.deporvillage.com" target="_blank">Deporvillage</a>,   donde soy responsable de guiar y ejecutar la visión técnica para esta área crítica de la plataforma.
     </p>
     <p class="lead">
-    My expertise lies in designing and implementing microservices within complex architectural landscapes.
-    I have a keen interest in <strong>SRE</strong> and <strong>DevOps</strong> principles, constantly seeking to improve operational efficiency and
-    reliability through automation and best practices.
+    Mi experiencia se centra en el diseño e implementación de microservicios dentro de entornos arquitectónicos complejos. 
+    Tengo un gran interés en los principios de <strong>SRE</strong> y <strong>DevOps</strong>, buscando constantemente mejorar la eficiencia operativa y la fiabilidad a través de la automatización y las mejores prácticas.
     </p>
     <p class="lead">
-    I'm a highly motivated and results-oriented individual with a strong desire for <strong>continuous learning</strong> and
-    improvement. I'm eager to apply new technologies and methodologies to enhance the quality and performance of
-    the software I develop.
+    Soy una persona altamente motivada y orientada a resultados, con un fuerte deseo de <strong>aprendizaje continuo</strong> y mejora. 
+    Estoy ansioso por aplicar nuevas tecnologías y metodologías para mejorar la calidad y el rendimiento del software que desarrollo.
     </p>
 
 - id: "showcase_button"
@@ -88,7 +86,7 @@
   translation: "Experiencia"
 
 - id: "experience_description"
-  translation: "Here a list of my professional experience along with the companies I've worked for and the projects I've been involved in. Also you can check my LinkedIn and GitHub profiles."
+  translation: "Aquí tienes una lista de mi experiencia profesional junto con las empresas para las que he trabajado y los proyectos en los que he participado. También puedes consultar mis perfiles de LinkedIn y GitHub."
 
 - id: "experience_button"
   translation: "LinkedIn" 

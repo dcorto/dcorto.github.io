@@ -21,11 +21,14 @@
           <h1 class="rad-fade-down rad-waiting rad-animate">{{ .Title }}</h1>
           {{ .Content }}
           <div class="posts-list">
-            {{ range .Pages }}
+            {{ $pages := where .Site.RegularPages "Type" "blog" }}
+            {{ $pages = $pages.ByDate.Reverse }}
+            {{ range (.Paginate $pages).Pages }}
               <div class="row row--padded rad-animation-group rad-fade-down rad-waiting rad-animate section--border-bottom">
                 {{ .Render "summary" }}
               </div>
             {{ end }}
+            {{ partial "pagination.html" . }}
           </div>
         </div>
       </div>

@@ -1,6 +1,5 @@
 ---
-title: 'Theme shortcodes 1'
-slug: 'pepito-grillo'
+title: 'Theme shortcodes 5'
 date: 2025-02-14T14:38:33+02:00
 draft: false
 type: 'blog'
@@ -9,7 +8,7 @@ tags:
   - guide
 ---
 
-![oliiiii](/images/blog/post-2.jpg "aaa")
+![alt](/images/blog/post-2.jpg)
 
 Shortcodes are a convenient [functionality of Hugo](https://gohugo.io/content-management/shortcodes/), allowing you to embed templates or layouts within other content.
 

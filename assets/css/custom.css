@@ -61,3 +61,54 @@ section#experience div#main-content h3 a {
     color: #6897bb !important;
 }
 
+/* blog */
+.posts-list header a,
+section#blog-single h1 a {
+    color: #6897bb;
+}
+
+@media (min-width: 992px) {
+    article.post.summary h2, article.post.summary .h2 {
+        font-size: 2.5rem !important;
+    }
+}
+
+article.post.summary h2, article.post.summary .h2 {
+    font-size: 2.5rem !important;
+}
+
+.content-browser a.previous,
+.content-browser a.next {
+    color: #6c757d;
+}
+
+/* paginator */
+.pagination.pagination-default {
+    margin-top:-40px;
+}
+
+.section ul.pagination li.page-item {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+    .section ul.pagination li.page-item::before {
+        display: none;
+    }
+
+.section li.page-item .page-link{
+    border-radius: 0;
+    padding: 14px 15px;
+    color: #6c757d;
+    border-color: #6c757d;
+}
+
+    .section li.page-item .page-link:hover{
+        color: #ffffff;
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+
+.section li.page-item.active .page-link{
+    background-color: #6897bb;
+    color: #fff;
+}

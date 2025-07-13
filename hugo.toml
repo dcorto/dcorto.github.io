@@ -3,8 +3,18 @@ languageCode = "en"
 #theme = "adritian-free-hugo-theme" <- using modules, do not need this line
 
 # https://gohugo.io/content-management/taxonomies/
-disableKinds = ["taxonomy", "term", "rss"]
+disableKinds = ["taxonomy", "term"]
 enableRobotsTXT = true
+
+[outputs]
+  home = ['html']
+  section = ['html', 'rss']
+  taxonomy = ['html']
+  term = ['html']
+
+[services]
+  [services.rss]
+    limit = 42
 
 [module]
   [[module.imports]]
@@ -72,6 +82,10 @@ target = "assets/js/vendor/bootstrap.bundle.min.js"
   languageName = 'English'
   title = 'David Corto Camacho | Senior Software Engineer & Tech Lead at Deporvillage'
   weight = 0
+  [languages.en.pagination]
+    disableAliases = false
+    pagerSize = 10
+    path = 'page'
 
   [languages.en.menus]
   [[languages.en.menus.header]]
@@ -112,16 +126,21 @@ target = "assets/js/vendor/bootstrap.bundle.min.js"
   title = 'David Corto Camacho | Senior Software Engineer & Tech Lead en Deporvillage'
   weight = 1
   contentDir = 'content/es'
+  [languages.es.pagination]
+    disableAliases = false
+    pagerSize = 10
+    path = 'pagina'
+
   [[languages.es.menus.header]]
   name = 'Experiencia'
   URL = '/es/#experience'
   weight = 1
   [[languages.es.menus.header]]
-  name = 'Formación'
+  name = 'Educación'
   URL = '/es/#education'
   weight = 2
   [[languages.es.menus.header]]
-  name = 'Recomendaciones'
+  name = 'Testimonios'
   URL = '/es/#testimonial'
   weight = 3
   [[languages.es.menus.header]]
@@ -134,11 +153,11 @@ target = "assets/js/vendor/bootstrap.bundle.min.js"
   URL = "/es/#experience"
   weight = 1
   [[languages.es.menus.footer]]
-  name = "Formación"
+  name = "Educación"
   URL = "/es/#education"
   weight = 3
   [[languages.es.menus.footer]]
-  name = "Recomendaciones"
+  name = "Testimonios"
   URL = "/es/#testimonial"
   weight = 3
 
