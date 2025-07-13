@@ -1,0 +1,189 @@
+## Header
+- id: "logo_text1"
+  translation: "David"
+
+- id: "logo_text2"
+  translation: "Corto Camacho"
+
+## Footer
+- id: "footer_notice"
+  translation: "&copy; David Corto Camacho. Impulsat per <a href='https://gohugo.io/' target='_blank'>Hugo</a> amb el tema <a href='https://github.com/zetxek/adritian-free-hugo-theme' target='_blank'>Adritian</a>"
+
+- id: "language"
+  translation: "Idioma"
+
+- id: "toggle_theme"
+  translation: "Canviar tema"
+
+- id: "theme_light"
+  translation: "☀️ Clar"
+
+- id: "theme_dark"
+  translation: "🌑 Fosc"
+
+- id: "theme_auto"
+  translation: "✨ Auto"
+
+## Homepage head title
+- id: "head_title"
+  translation: "David Corto Camacho | Senior Software Engineer & Tech Lead a Deporvillage"
+
+- id: "head_description"
+  translation: "David Corto Camacho | Senior Software Engineer & Tech Lead a Deporvillage"
+
+## Homepage showcase
+- id: "showcase_title"
+  translation: "Hola, soc en David"
+
+- id: "showcase_subtitle"
+  translation: "Senior Software Engineer"
+
+- id: "showcase_description"
+  translation: >
+    <p class="lead">
+    Soc Enginyer de Software Sènior amb una sòlida experiència liderant equips tècnics i desenvolupant solucions de software robustes i escalables. Actualment, soc <strong>Tech Lead</strong> a l'equip de catàleg de <a href="https://www.deporvillage.com" target="_blank">Deporvillage</a>, on soc responsable de guiar i executar la visió tècnica per a aquesta àrea crítica de la plataforma.
+    </p>
+    <p class="lead">
+    La meva experiència se centra en el disseny i la implementació de microserveis dins d'entorns arquitectònics complexos. 
+    Tinc un gran interès en els principis de <strong>SRE</strong> i <strong>DevOps</strong>, buscant constantment millorar l'eficiència operativa i la fiabilitat a través de l'automatització i les millors pràctiques.
+    </p>
+    <p class="lead">
+    Soc una persona altament motivada i orientada a resultats, amb un fort desig d'<strong>aprenentatge continu</strong> i millora. 
+    Estic ansiós per aplicar noves tecnologies i metodologies per millorar la qualitat i el rendiment del software que desenvolupo.
+    </p>
+
+- id: "showcase_button"
+  translation: "LinkedIn"
+
+  ## not visible but used for accessibility
+- id: "showcase_image_alt"
+  translation: "Imatge de David Corto Camacho"
+
+## Homepage about
+- id: "about_title"
+  translation: "Qui soc?"
+
+- id: "about_content"
+  translation: >
+    <p class="lead">
+      Aquí pots afegir alguna informació sobre tu. Un petit extracte que descrigui la teva experiència, per exemple.   
+      </p>
+      <p class="lead">
+      Explica alguna cosa sobre la teva formació acadèmica, així com les teves àrees de treball preferides. Pensa en aquesta secció com un context per a l'experiència que descriuràs més avall. Per què vas canviar de feina? Què et va motivar a agafar un nou lloc? Fins i tot si no estàs buscant feina, és una bona manera d'insinuar quin tipus de projectes t'interessen.
+    </p>
+
+- id: "about_button"
+  translation: "Sobre mi"
+
+  ## not visible but used for accessibility
+- id: "about_image_alt"
+  translation: "Una imatge de Cool Name"
+
+## Homepage education
+- id: "education_title"
+  translation: "Educació"
+
+## Homepage experience
+- id: "experience_title"
+  translation: "Experiència"
+
+- id: "experience_description"
+  translation: "Aquí tens una llista de la meva experiència professional juntament amb les empreses per a les quals he treballat i els projectes en què he participat. També pots consultar els meus perfils de LinkedIn i GitHub."
+
+- id: "experience_button"
+  translation: "LinkedIn"
+
+- id: "experience_button_url"
+  translation: "https://www.linkedin.com/in/davidcortocamacho/"
+
+- id: "experience_button2"
+  translation: "GitHub"
+
+- id: "experience_button2_url"
+  translation: "https://github.com/dcorto"
+
+- id: "experience_button3"
+  translation: "Veure-ho tot"
+
+- id: "experience_button3_url"
+  translation: "/ca/experience"
+
+- id: "experience_and"
+  translation: "I"
+
+- id: "experience_more"
+  translation: "més"
+
+## Homepage client & work
+- id: "client_work_title"
+  translation: "Clients i Feines"
+
+## Homepage newsletter
+- id: "newsletter_title"
+  translation: "Butlletí"
+
+- id: "newsletter_button"
+  translation: "Subscriure's"
+
+- id: "newsletter_placeholder"
+  translation: "El teu correu electrònic"
+
+- id: "newsletter_success_message"
+  translation: "Gràcies per subscriure't al meu butlletí!"
+
+- id: "newsletter_error_message"
+  translation: "Hi ha hagut un error. Si us plau, torna-ho a provar."
+
+- id: "newsletter_note"
+  translation: "Mai compartirem el teu correu electrònic amb ningú."
+
+## Homepage testimonials
+- id: "testimonials_title"
+  translation: "Testimonis"
+
+## Homepage contact
+- id: "contact_title"
+  translation: "Contacte"
+
+- id: "contact_button"
+  translation: "Enviar missatge"
+
+- id: "contact_form_name"
+  translation: "Nom complet"
+
+- id: "contact_form_email"
+  translation: "Correu electrònic"
+
+- id: "contact_form_message"
+  translation: "Escriu el teu missatge aquí"
+
+- id: "contact_phone_title"
+  translation: "Número de telèfon"
+
+- id: "contact_phone_number"
+  translation: "+555 (11) 123 44 55"
+
+- id: "contact_email_title"
+  translation: "Correu electrònic"
+
+- id: "contact_email_email"
+  translation: '<a href="mailto:mail@example.com">mail@example.com</a>'
+
+- id: "contact_address_title"
+  translation: "Adreça"
+
+- id: "contact_address_address"
+  translation: "Carrer/barri exacte (pots ometre-ho)<br />Codi postal, Ciutat"
+
+## Blog
+- id: "read_more"
+  translation: "Llegir més"
+
+- id: "published_on"
+  translation: "Publicat el"
+
+- id: "continue_reading"
+  translation: "Continuar llegint"
+
+- id: "words"
+  translation: "Paraules"

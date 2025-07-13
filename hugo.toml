@@ -14,7 +14,7 @@ enableRobotsTXT = true
 
 [services]
   [services.rss]
-    limit = 42
+    limit = 15
 
 [module]
   [[module.imports]]
@@ -159,6 +159,49 @@ target = "assets/js/vendor/bootstrap.bundle.min.js"
   [[languages.es.menus.footer]]
   name = "Testimonios"
   URL = "/es/#testimonial"
+  weight = 3
+
+  [languages.ca]
+  disabled = false
+  languageCode = 'ca'
+  languageDirection = 'ltr'
+  languageName = 'Català'
+  title = 'David Corto Camacho | Senior Software Engineer & Tech Lead en Deporvillage'
+  weight = 2
+  contentDir = 'content/ca'
+  [languages.ca.pagination]
+    disableAliases = false
+    pagerSize = 10
+    path = 'pagina'
+
+  [[languages.ca.menus.header]]
+  name = 'Experiencia'
+  URL = '/ca/#experience'
+  weight = 1
+  [[languages.ca.menus.header]]
+  name = 'Educació'
+  URL = '/ca/#education'
+  weight = 2
+  [[languages.ca.menus.header]]
+  name = 'Testimonis'
+  URL = '/ca/#testimonial'
+  weight = 3
+  [[languages.ca.menus.header]]
+  name = "Blog"
+  URL = "/es/blog"
+  weight = 4
+
+  [[languages.ca.menus.footer]]
+  name = "Experiencia"
+  URL = "/ca/#experience"
+  weight = 1
+  [[languages.ca.menus.footer]]
+  name = "Educació"
+  URL = "/ca/#education"
+  weight = 3
+  [[languages.ca.menus.footer]]
+  name = "Testimonis"
+  URL = "/ca/#testimonial"
   weight = 3
 
 # Experience
