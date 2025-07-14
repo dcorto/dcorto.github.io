@@ -1,6 +1,7 @@
 ---
 date: 2016-03-01T00:00:00+01:00
 draft: false
+translationKey: "cio-team-lead-senior-php-developer-at-twonav"
 title: "Twonav"
 description: "Lead web developer of e-commerce, cloud and other online projects of the company"
 jobTitle: "Team Lead / CIO / Senior PHP Developer"

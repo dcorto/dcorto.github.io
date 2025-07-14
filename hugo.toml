@@ -117,6 +117,10 @@ target = "assets/js/vendor/bootstrap.bundle.min.js"
   name = 'Testimonials'
   URL = '#testimonial'
   weight = 3
+  [[languages.en.menus.footer]]
+  name = "Blog"
+  URL = "/es/blog"
+  weight = 4
 
   [languages.es]
   disabled = false
@@ -160,6 +164,10 @@ target = "assets/js/vendor/bootstrap.bundle.min.js"
   name = "Testimonios"
   URL = "/es/#testimonial"
   weight = 3
+  [[languages.es.menus.footer]]
+  name = "Blog"
+  URL = "/es/blog"
+  weight = 4
 
   [languages.ca]
   disabled = false
@@ -175,7 +183,7 @@ target = "assets/js/vendor/bootstrap.bundle.min.js"
     path = 'pagina'
 
   [[languages.ca.menus.header]]
-  name = 'Experiencia'
+  name = 'Experiència'
   URL = '/ca/#experience'
   weight = 1
   [[languages.ca.menus.header]]
@@ -192,7 +200,7 @@ target = "assets/js/vendor/bootstrap.bundle.min.js"
   weight = 4
 
   [[languages.ca.menus.footer]]
-  name = "Experiencia"
+  name = "Experiència"
   URL = "/ca/#experience"
   weight = 1
   [[languages.ca.menus.footer]]
@@ -203,6 +211,10 @@ target = "assets/js/vendor/bootstrap.bundle.min.js"
   name = "Testimonis"
   URL = "/ca/#testimonial"
   weight = 3
+  [[languages.ca.menus.footer]]
+  name = "Blog"
+  URL = "/es/blog"
+  weight = 4
 
 # Experience
 [params.experience]

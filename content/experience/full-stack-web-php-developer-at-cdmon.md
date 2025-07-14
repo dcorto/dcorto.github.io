@@ -1,6 +1,7 @@
 ---
 date: 2015-02-01T00:00:00+01:00
 draft: false
+translationKey: "full-stack-web-php-developer-at-cdmon"
 title: "CDmon (10dencehispahard S.L.)"
 description: "Lead developer of all e-commerce and marketing platforms"
 jobTitle: "Full Stack Web PHP Developer"

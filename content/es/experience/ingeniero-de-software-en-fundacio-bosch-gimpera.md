@@ -1,6 +1,7 @@
 ---
 date: 2014-06-01T00:00:00+01:00
 draft: false
+translationKey: "software-engineer-at-fundacio-bosch-gimpera"
 title: "Fundació Bosch i Gimpera"
 description: "En colaboración con la Universidad de Barcelona. Mis principales responsabilidades fueron como jefe de proyecto, arquitecto de sistemas y desarrollador web para desarrollar una nueva herramienta para la gestión interna de una empresa arrocera."
 jobTitle: "Ingeniero de Software"

@@ -4,4 +4,4 @@ date: 2025-01-01
 draft: false
 ---
 
-Lorem ipsum
+Aquí publico mis reflexiones, comparto recursos y explico mis proyectos.

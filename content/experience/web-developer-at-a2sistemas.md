@@ -1,6 +1,7 @@
 ---
 date: 2007-01-01T00:00:00+01:00
 draft: false
+translationKey: "web-developer-at-a2sistemas"
 title: "A2 Sistemas"
 description: "Frontend and Backend Web Developer with PHP and .NET, HTML, CSS. Project manager and IT consultant."
 jobTitle: "Web Developer"

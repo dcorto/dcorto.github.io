@@ -1,6 +1,7 @@
 ---
 date: 2019-06-01T00:00:00+01:00
 draft: false
+translationKey: "senior-software-engineer-at-deporvillage"
 title: "Deporvillage"
 description: "Leading the development of the product catalog at Deporvillage"
 jobTitle: "Senior Software Engineer & Tech Lead"

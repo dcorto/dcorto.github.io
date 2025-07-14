@@ -1,6 +1,7 @@
 ---
 date: 2018-10-01T00:00:00+01:00
 draft: false
+translationKey: "senior-software-engineer-at-euromillions"
 title: "Euromillions.com"
 description: "Com a Enginyer de Software Sènior, vaig treballar millorant el lloc principal i els serveis de pagament (microserveis)."
 jobTitle: "Enginyer de Software Sènior"

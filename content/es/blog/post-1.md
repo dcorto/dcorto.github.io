@@ -11,6 +11,26 @@ tags:
 
 ![oliiiii](/images/blog/post-2.jpg "aaa")
 
+{{< youtube 0RKpf3rK57I >}}
+
+{{< highlight go "hl_lines=3 6-8" >}}
+package main
+
+import "fmt"
+
+func main() {
+    for i := 0; i < 3; i++ {
+        fmt.Println("Value of i:", i)
+    }
+}
+{{< /highlight >}}
+
+# oli
+
+## oli 2
+
+### oli 3
+
 Shortcodes are a convenient [functionality of Hugo](https://gohugo.io/content-management/shortcodes/), allowing you to embed templates or layouts within other content.
 
 Some of the example built-in shortcodes are Instagram posts, YouTube videos, QR codes, etc. You can find [the full list in the official docs](https://gohugo.io/content-management/shortcodes/#embedded).

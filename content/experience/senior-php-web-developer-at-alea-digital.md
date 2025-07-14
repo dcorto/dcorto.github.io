@@ -1,6 +1,7 @@
 ---
 date: 2016-01-01T00:00:00+01:00
 draft: false
+translationKey: "senior-php-web-developer-at-alea-digital"
 title: "Alea Digital S.L."
 description: "PHP Developer in one of the IT teams of the company"
 jobTitle: "Senior PHP Web Developer "

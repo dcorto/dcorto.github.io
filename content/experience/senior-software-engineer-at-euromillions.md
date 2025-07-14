@@ -1,6 +1,7 @@
 ---
 date: 2018-10-01T00:00:00+01:00
 draft: false
+translationKey: "senior-software-engineer-at-euromillions"
 title: "Euromillions.com"
 description: "As a Senior Software Engineer, I worked improving the main site and payment services (microservices)."
 jobTitle: "Senior Software Engineer"
