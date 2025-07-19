@@ -7,7 +7,7 @@
 
 ## Footer
 - id: "footer_notice"
-  translation: "&copy; David Corto Camacho. Powered by <a href='https://gohugo.io/' target='_blank'>Hugo</a> using theme <a href='https://github.com/zetxek/adritian-free-hugo-theme' target='_blank'>Adritian</a>"
+  translation: "&copy; David Corto Camacho. Impulsado por <a href='https://gohugo.io/' target='_blank'>Hugo</a> con el tema <a href='https://github.com/zetxek/adritian-free-hugo-theme' target='_blank'>Adritian</a>"
 
 - id: "language"
   translation: "Idioma"
