@@ -7,7 +7,7 @@
 
 ## Footer
 - id: "footer_notice"
-  translation: "&copy; David Corto Camacho. Powered by <a href='https://gohugo.io/ target='_blank>Hugo</a> using theme <a href='https://github.com/zetxek/adritian-free-hugo-theme' target='_blank'>Adritian</a>"
+  translation: "&copy; David Corto Camacho. Powered by <a href='https://gohugo.io/' target='_blank'>Hugo</a> using theme <a href='https://github.com/zetxek/adritian-free-hugo-theme' target='_blank'>Adritian</a>"
 
 - id: "language"
   translation: "Language"
@@ -58,7 +58,7 @@
 
   ## not visible but used for accessibility
 - id: "showcase_image_alt"
-  translation: "A picture of Cool Name"
+  translation: "A picture of David Corto Camacho"
 
 ## Homepage about
 - id: "about_title"
@@ -79,6 +79,10 @@
 
 - id: "about_button"
   translation: "About Me"
+
+  ## not visible but used for accessibility
+- id: "about_image_alt"
+  translation: "Una imagen de Cool Name"
 
 ## Homepage education
 - id: "education_title"
@@ -108,6 +112,12 @@
 
 - id: "experience_button3_url"
   translation: "/experience"
+
+- id: "experience_and"
+  translation: "And"
+
+- id: "experience_more"
+  translation: "more"
 
 ## Homepage client & work
 - id: "client_work_title"
@@ -178,7 +188,10 @@
   translation: "Read more"
 
 - id: "published_on"
-  translation: "Published en"
+  translation: "Published on"
 
 - id: "continue_reading"
   translation: "Continue reading"
+
+- id: "words"
+  translation: "Words"

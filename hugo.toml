@@ -3,8 +3,18 @@ languageCode = "en"
 #theme = "adritian-free-hugo-theme" <- using modules, do not need this line
 
 # https://gohugo.io/content-management/taxonomies/
-disableKinds = ["taxonomy", "term", "rss"]
+disableKinds = ["taxonomy", "term"]
 enableRobotsTXT = true
+
+[outputs]
+  home = ['html']
+  section = ['html', 'rss']
+  taxonomy = ['html']
+  term = ['html']
+
+[services]
+  [services.rss]
+    limit = 15
 
 [module]
   [[module.imports]]
@@ -72,95 +82,138 @@ target = "assets/js/vendor/bootstrap.bundle.min.js"
   languageName = 'English'
   title = 'David Corto Camacho | Senior Software Engineer & Tech Lead at Deporvillage'
   weight = 0
+  [languages.en.pagination]
+    disableAliases = false
+    pagerSize = 10
+    path = 'page'
 
   [languages.en.menus]
   [[languages.en.menus.header]]
   name = 'Experience'
   URL = '#experience'
-  weight = 2
+  weight = 1
   [[languages.en.menus.header]]
   name = 'Education'
   URL = '#education'
-  weight = 3
+  weight = 2
   [[languages.en.menus.header]]
   name = 'Testimonials'
   URL = '#testimonial'
+  weight = 3
+  [[languages.en.menus.header]]
+  name = "Blog"
+  URL = "/es/blog"
   weight = 4
-  #  [[languages.en.menus.header]]
-  #  name = "Experience"
-  #  URL = "#experience"
-  #  weight = 4
-  #[[languages.en.menus.header]]
-  #name = "Blog"
-  #URL = "/blog"
-  #weight = 5
-  #[[languages.en.menus.header]]
-  #name = "Contact"
-  #URL = "#contact"
-  #weight = 6
 
   [[languages.en.menus.footer]]
   name = "Experience"
   URL = "#experience"
-  weight = 2
+  weight = 1
   [[languages.en.menus.footer]]
   name = "Education"
   URL = "#education"
-  weight = 3
+  weight = 2
   [[languages.en.menus.footer]]
   name = 'Testimonials'
   URL = '#testimonial'
+  weight = 3
+  [[languages.en.menus.footer]]
+  name = "Blog"
+  URL = "/es/blog"
   weight = 4
-  #[[languages.en.menus.footer]]
-  #name = "Contact"
-  #URL = "#contact"
-  #weight = 4
-
 
   [languages.es]
-  disabled = true
+  disabled = false
   languageCode = 'es'
   languageDirection = 'ltr'
   languageName = 'Español'
-  title = ''
-  weight = 0
+  title = 'David Corto Camacho | Senior Software Engineer & Tech Lead en Deporvillage'
+  weight = 1
+  contentDir = 'content/es'
+  [languages.es.pagination]
+    disableAliases = false
+    pagerSize = 10
+    path = 'pagina'
+
   [[languages.es.menus.header]]
-  name = 'Sobre mi'
-  URL = '/es/#about'
+  name = 'Experiencia'
+  URL = '/es/#experience'
+  weight = 1
+  [[languages.es.menus.header]]
+  name = 'Educación'
+  URL = '/es/#education'
   weight = 2
   [[languages.es.menus.header]]
-  name = 'Portfolio'
-  URL = '/es/#portfolio'
+  name = 'Testimonios'
+  URL = '/es/#testimonial'
   weight = 3
-
-  #  [[languages.es.menus.header]]
-  #  name = "Experiencia"
-  #  URL = "/es/#experience"
-  #  weight = 4
-
   [[languages.es.menus.header]]
   name = "Blog"
   URL = "/es/blog"
-  weight = 5
-
-  [[languages.es.menus.header]]
-  name = "Contacto"
-  URL = "/es/#contact"
-  weight = 6
+  weight = 4
 
   [[languages.es.menus.footer]]
-  name = "Sobre mi"
-  URL = "/es/#about"
-  weight = 2
-
+  name = "Experiencia"
+  URL = "/es/#experience"
+  weight = 1
   [[languages.es.menus.footer]]
-  name = "Portfolio"
-  URL = "/es/#portfolio"
+  name = "Educación"
+  URL = "/es/#education"
   weight = 3
-
   [[languages.es.menus.footer]]
-  name = "Contact"
-  URL = "/es/#contact"
+  name = "Testimonios"
+  URL = "/es/#testimonial"
+  weight = 3
+  [[languages.es.menus.footer]]
+  name = "Blog"
+  URL = "/es/blog"
+  weight = 4
+
+  [languages.ca]
+  disabled = false
+  languageCode = 'ca'
+  languageDirection = 'ltr'
+  languageName = 'Català'
+  title = 'David Corto Camacho | Senior Software Engineer & Tech Lead en Deporvillage'
+  weight = 2
+  contentDir = 'content/ca'
+  [languages.ca.pagination]
+    disableAliases = false
+    pagerSize = 10
+    path = 'pagina'
+
+  [[languages.ca.menus.header]]
+  name = 'Experiència'
+  URL = '/ca/#experience'
+  weight = 1
+  [[languages.ca.menus.header]]
+  name = 'Educació'
+  URL = '/ca/#education'
+  weight = 2
+  [[languages.ca.menus.header]]
+  name = 'Testimonis'
+  URL = '/ca/#testimonial'
+  weight = 3
+  [[languages.ca.menus.header]]
+  name = "Blog"
+  URL = "/es/blog"
+  weight = 4
+
+  [[languages.ca.menus.footer]]
+  name = "Experiència"
+  URL = "/ca/#experience"
+  weight = 1
+  [[languages.ca.menus.footer]]
+  name = "Educació"
+  URL = "/ca/#education"
+  weight = 3
+  [[languages.ca.menus.footer]]
+  name = "Testimonis"
+  URL = "/ca/#testimonial"
+  weight = 3
+  [[languages.ca.menus.footer]]
+  name = "Blog"
+  URL = "/es/blog"
   weight = 4
 
 # Experience
