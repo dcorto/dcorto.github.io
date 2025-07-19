@@ -10,7 +10,7 @@ tags:
     - diseño
 ---
 
-![](/images/blog/20250105-especializacion-y-el-exito-de-un-producto "Especialización y el éxito de un producto")
+![](/images/blog/20250105-especializacion-y-el-exito-de-un-producto.jpeg "Especialización y el éxito de un producto")
 
 ### 🤔 ¿Por qué la especialización es la clave del éxito de un producto?
 
