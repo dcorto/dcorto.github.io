@@ -4,7 +4,8 @@
     <div class="post-meta">
       <div>
         <section>
-          {{ i18n "published_on" }} <h4 class="date">{{ .Date | time.Format ":date_full" }}</h4> · <h4 class="wordcount">{{ .WordCount }} {{ i18n "words" }}</h4>
+          {{ i18n "published_on" }}&nbsp;
+          <h4 class="date">{{ .Date | time.Format ":date_full" }}</h4> · <h4 class="wordcount">{{ .WordCount }} {{ i18n "words" }}</h4>
         </section>
         {{ with .GetTerms "topics" }}
         <ul class="topics">

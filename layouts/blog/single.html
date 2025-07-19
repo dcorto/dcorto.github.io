@@ -18,7 +18,8 @@
         <aside id="meta" class="light-border-bottom">
           <div>
             <section>
-              {{ i18n "published_on" }} <h4 id="date">{{ .Date | time.Format ":date_full" }}</h4> · <h4 id="wordcount">{{ .WordCount }} {{ i18n "words" }}</h4>
+              {{ i18n "published_on" }}&nbsp;
+              <h4 id="date">{{ .Date | time.Format ":date_full" }}</h4> · <h4 id="wordcount">{{ .WordCount }} {{ i18n "words" }}</h4>
             </section>
             {{ with .GetTerms "topics" }}
             <ul id="topics">
