@@ -33,7 +33,8 @@ export default defineConfig ({
             [
                 ['github'],
                 ['html', { outputFolder }],
-                ['list']
+                ['list'],
+                ['json', {  outputFile: 'playwright-report.json' }]
             ] :
             [
                 ['html', { outputFolder }],
