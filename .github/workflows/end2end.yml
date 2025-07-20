@@ -55,23 +55,35 @@ jobs:
         run: npx playwright install --with-deps
 
   test:
+    timeout-minutes: 10
     needs: prepare
     runs-on: ubuntu-latest
     steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: Install Dart Sass
+        run: sudo snap install dart-sass
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
+
       - name: Restore Node Modules
         uses: actions/cache/restore@v4
         with:
           path: |
             node_modules
           key: modules-${{ hashFiles('package-lock.json') }}
+
       - name: Restore Playwright Browsers
         uses: actions/cache/restore@v4
         with:
@@ -82,7 +94,7 @@ jobs:
       - name: Build and serve site
         run: |
           hugo server --buildDrafts --buildFuture --bind 0.0.0.0 &
-          sleep 10
+          sleep 5
 
       - name: Run Playwright tests
         run: npm run test:e2e
