@@ -50,6 +50,8 @@ jobs:
     timeout-minutes: 10
     needs: prepare
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - name: Install Hugo CLI
         run: |
