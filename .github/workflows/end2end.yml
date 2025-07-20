@@ -94,17 +94,10 @@ jobs:
       - name: Run Playwright tests
         run: npm run test:e2e
 
-      - name: Get the failure count
-        id: tests
-        run: |
-          export count=$(cat ./playwright-report/result.txt | grep Failed | cut -d ':' -f 2 | tr -d ' ') 
-          echo "fail_count=$count" >> "$GITHUB_OUTPUT"
-          echo $count
-
       - name: Publish Test Report
         uses: ctrf-io/github-test-reporter@v1
         with:
-          report-path: './playwright-report.json'
+          report-path: './test-report.json'
           pull-request-report: true
         if: always()
 

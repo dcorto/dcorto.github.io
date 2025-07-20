@@ -34,7 +34,10 @@ export default defineConfig ({
                 ['github'],
                 ['html', { outputFolder }],
                 ['list'],
-                ['json', {  outputFile: 'playwright-report.json' }]
+                ['playwright-ctrf-json-reporter', {
+                    outputFile: 'test-report.json',
+                    screenshot: true
+                }]
             ] :
             [
                 ['html', { outputFolder }],
