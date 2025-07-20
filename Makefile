@@ -1,7 +1,7 @@
 all: help
 
 start-hugo-dev:
-	hugo serve --disableFastRender --ignoreCache
+	hugo serve --disableFastRender --ignoreCache -buildDrafts --buildFuture
 
 update-modules:
 	hugo mod get -u

@@ -11,9 +11,8 @@
       "postcss-cli": "project"
     }
   },
-  "dependencies": {},
   "devDependencies": {
-    "@playwright/test": "^1.49.1",
+    "@playwright/test": "^1.54.1",
     "@types/node": "^22.10.5",
     "autoprefixer": "^10.4.17",
     "bootstrap": "^5.3.3",
