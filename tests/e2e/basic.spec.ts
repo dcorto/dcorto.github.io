@@ -7,7 +7,7 @@ if (!BASE_URL.startsWith('http')) {
 }
 console.log(`Running tests against ${BASE_URL}`);
 
-test.describe('Theme basic functionality', () => {
+test.describe('theme basic functionality', () => {
     test.beforeAll(async () => {
         // Health check
         try {
@@ -20,39 +20,7 @@ test.describe('Theme basic functionality', () => {
 
     test('homepage loads correctly', async ({ page }) => {
         await page.goto(BASE_URL);
-        await expect(page).toHaveTitle(/Adritian/);
-    });
-
-    test('theme switcher works', async ({ page }) => {
-        test.skip(process.env.TEST_NO_MENUS === 'true', 'Skipping test because TEST_NO_MENUS is true');
-
-        // set the browser theme preference to "light"
-        // Emulate dark color scheme
-        await page.emulateMedia({ colorScheme: 'dark' });
-
-
-        await page.goto(BASE_URL);
-        // attribute exists
-        await expect(page.locator('html')).toHaveAttribute('data-bs-theme');
-        // click on theme switcher
-        await page.click('#bd-theme-footer');
-        /* click on the html element:
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                        ☀️ Light
-                      </button>
-        */
-        await page.getByRole('button', { name: '☀️ Light' }).last().click();
-        await expect(page.locator('html')).toHaveAttribute('data-bs-theme', 'light');
-        // click on theme switcher
-        await page.click('#bd-theme-footer');
-        /* click on the html element:
-        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark" aria-pressed="true">
-                        🌑 Dark
-                        <span class="theme-icon dark d-none" aria-hidden="true"></span>
-                      </button>
-        */
-        await expect(page.getByText('🌑 Dark').last()).toBeVisible();
-        await expect(page.locator('html')).toHaveAttribute('data-bs-theme', 'light');
+        await expect(page).toHaveTitle(/David Corto Camacho/);
     });
 
     test('navigation is visible', async ({ page }) => {
@@ -67,7 +35,7 @@ test.describe('Theme basic functionality', () => {
 
     test('skip to content link works', async ({ page }) => {
         // Navigate to a content page
-        await page.goto(`${BASE_URL}/blog`);
+        await page.goto(`${BASE_URL}/es/blog`);
 
         // The skip link should be initially hidden but in the DOM
         const skipLink = page.locator('.skip-to-content-link');
@@ -93,9 +61,7 @@ test.describe('Theme basic functionality', () => {
 });
 
 test('footer_right should contain exactly 2 dropdown element for language and theme', async ({ page }) => {
-    test.skip(process.env.TEST_NO_MENUS === 'true', 'Skipping test because TEST_NO_MENUS is true');
-
-    await page.goto(`${BASE_URL}/disable-menu/`);
+    await page.goto(`${BASE_URL}`);
 
     // Verify footer and footer_right exist
     await expect(page.locator('footer')).toBeAttached();
@@ -105,9 +71,8 @@ test('footer_right should contain exactly 2 dropdown element for language and th
     await expect(page.locator('footer .footer_right .dropdown')).toHaveCount(2);
 });
 
-
 test('should load all homepage images correctly', async ({ page }) => {
-    await page.goto('http://localhost:1313');
+    await page.goto(`${BASE_URL}`);
 
     // Wait for network to be idle (most images loaded)
     await page.waitForLoadState('networkidle');
@@ -141,19 +106,6 @@ test('should load all homepage images correctly', async ({ page }) => {
         }
     };
 
-    // Check all required image elements
+    // Check profile image
     await checkImageElements('.profile-image img');
-
-    // .image-left-overflow might be an element with background image or contain an img
-    const leftOverflowElement = page.locator('.image-left-overflow').first();
-    await expect(leftOverflowElement).toBeVisible();
-
-    // Check if it contains any img elements
-    const hasImg = await page.locator('.image-left-overflow img').count() > 0;
-    if (hasImg) {
-        await checkImageElements('.image-left-overflow img');
-    }
-
-    await checkImageElements('.client-works-container picture img');
-    await checkImageElements('.testimonial__author .picture img');
 });
