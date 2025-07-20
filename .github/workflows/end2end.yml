@@ -84,7 +84,6 @@ jobs:
           key: playwright-${{ hashFiles('package-lock.json') }}
 
       - name: Install system dependencies for WebKit
-        if: ${{ inputs.browser == 'webkit' && steps.playwright-cache.outputs.cache-hit == 'true' }}
         run: npx playwright install-deps webkit
 
       - name: Build and serve site
