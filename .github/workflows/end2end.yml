@@ -59,9 +59,6 @@ jobs:
       - name: Install Dart Sass
         run: sudo snap install dart-sass
 
-      - name: Install libavif16 (for Safari browser)
-        run: sudo apt install libavif16
-
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -85,6 +82,10 @@ jobs:
           path: |
             ~/.cache/ms-playwright
           key: playwright-${{ hashFiles('package-lock.json') }}
+
+      - name: Install system dependencies for WebKit
+        if: ${{ inputs.browser == 'webkit' && steps.playwright-cache.outputs.cache-hit == 'true' }}
+        run: npx playwright install-deps webkit
 
       - name: Build and serve site
         run: |
