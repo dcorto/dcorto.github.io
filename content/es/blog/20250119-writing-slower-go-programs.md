@@ -5,7 +5,8 @@ date: 2025-01-19T11:00:00+02:00
 draft: false
 type: 'blog'
 tags: 
-    - Go    
+    - golang
+    - desarrollo
 ---
 
 ![](/images/blog/20250119-writing-slower-go-programs.jpeg "Writing slower Go Programs")
