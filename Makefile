@@ -1,7 +1,7 @@
 all: help
 
 start-hugo-dev:
-	hugo serve --disableFastRender --ignoreCache -buildDrafts --buildFuture
+	hugo serve --disableFastRender --ignoreCache --buildDrafts --buildFuture
 
 test-e2e:
 	npm run test:e2e
