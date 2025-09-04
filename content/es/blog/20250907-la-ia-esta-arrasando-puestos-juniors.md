@@ -33,3 +33,5 @@ creando organizaciones más rígidas y menos innovadoras.
 La pregunta no debería ser si elegimos entre IA o júniors. La verdadera cuestión es: ¿cómo usamos la IA para potenciar 
 a nuestros júniors, liberarlos de lo monótono y acelerar su conversión en los líderes que necesitaremos en la próxima 
 década?
+
+Fuente: [https://archive.ph/7lkWi](https://archive.ph/7lkWi)
