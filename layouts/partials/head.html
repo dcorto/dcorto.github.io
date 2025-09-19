@@ -23,7 +23,7 @@
 {{ if not .Params.seo.title }}
 <title>{{ i18n "head_title" }}</title>
 {{ else }}
-<title>David Corto Camacho | {{ .Params.seo.title }}</title>
+<title>{{ .Params.seo.title }}</title>
 {{ end }}
 {{ if not .Params.seo.description }}
 <meta name="description" content='{{ i18n "head_description" }}'>

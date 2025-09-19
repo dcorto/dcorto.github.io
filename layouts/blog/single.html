@@ -37,9 +37,13 @@
           </div>
         </aside>
 
-        <div class="row flex-column-reverse flex-md-row rad-fade-down">
+        <div class="row flex-column-reverse flex-md-row rad-fade-down light-border-bottom">
           <div class="col-12">{{ .Content | safeHTML }}</div>
         </div>
+
+        <aside class="content-browser">
+          <div class="giscus"></div>
+        </aside>
 
         <aside class="content-browser light-border-top">
             {{ i18n "continue_reading" }}
@@ -57,6 +61,66 @@
     </section>
 
     {{ partial "footer.html" . }} {{ partial "base-foot.html" . }}
+    <!-- giscus script -->
+    <script src="https://giscus.app/client.js"
+            data-repo="dcorto/dcorto.github.io"
+            data-repo-id="R_kgDONYP2jA"
+            data-category="Blog"
+            data-category-id="DIC_kwDONYP2jM4Cvp0C"
+            data-mapping="title"
+            data-strict="1"
+            data-reactions-enabled="1"
+            data-emit-metadata="1"
+            data-input-position="top"
+            data-theme="light"
+            data-lang="es"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <script>
+      /**
+       * Sincroniza el tema de Giscus con el tema del blog (claro/oscuro).
+       */
+      (function() {
+        // Función para enviar un mensaje al iframe de Giscus para cambiar su tema.
+        function setGiscusTheme(theme) {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (iframe) {
+            iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: theme } } }, 'https://giscus.app');
+          }
+        }
+
+        // Función que determina el tema actual del blog y se lo comunica a Giscus.
+        function syncGiscusTheme() {
+          const newTheme = document.documentElement.getAttribute('data-bs-theme');
+          setGiscusTheme(newTheme);
+        }
+
+        // Esperamos a que Giscus cargue y cree su iframe.
+        // Usamos un MutationObserver en el contenedor '.giscus' para ello.
+        const giscusContainer = document.querySelector('.giscus');
+        if (giscusContainer) {
+          new MutationObserver((mutations, observer) => {
+            const giscusIframe = document.querySelector('iframe.giscus-frame');
+            if (giscusIframe) {
+              // El iframe existe, pero su contenido de 'https://giscus.app' puede no estar cargado aún.
+              // Esperamos al evento 'load' para asegurar que el origen del iframe es el correcto antes de enviar mensajes.
+              giscusIframe.addEventListener('load', () => {
+                // Ahora que el iframe está completamente cargado, establecemos el tema inicial.
+                syncGiscusTheme();
+                
+                // Y ahora observamos cambios en el tema del blog para mantener Giscus sincronizado.
+                new MutationObserver(syncGiscusTheme).observe(document.documentElement, { attributes: true, attributeFilter: ['data-bs-theme'] });
+              });
+
+              // Dejamos de observar el contenedor de giscus, ya no es necesario.
+              observer.disconnect();
+            }
+          }).observe(giscusContainer, { childList: true });
+        }
+      })();
+    </script>
   </body>
 </html>
 <!-- endinject -->
