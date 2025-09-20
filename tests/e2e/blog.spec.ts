@@ -36,6 +36,7 @@ test.describe('blog functionality', () => {
         await expect(pageTwoLink).toBeVisible();
         await pageTwoLink.click()
         await expect(page).toHaveURL(/pagina\/2/);
+        await expect(page).toHaveTitle(/| Página 2/);
     });
 
     test('nav to post', async ({ page }) => {

@@ -23,6 +23,8 @@
 {{ if not .Params.seo.title }}
   {{ if and (eq .Section "blog") (eq .Kind "page") }}
 <title>{{ .Title }} | Blog </title>
+  {{ else if and (eq .Section "blog") (eq .Kind "section") }}
+<title>{{ .Title }}{{ if gt .Paginator.PageNumber 1 }} | Página {{ .Paginator.PageNumber }}{{ end }}</title>
   {{ else }}
 <title>{{ i18n "head_title" }}</title>
   {{ end }}
