@@ -20,7 +20,7 @@ test.describe('blog functionality', () => {
 
     test('blog index loads correctly', async ({ page }) => {
         await page.goto(BASE_URL);
-        await expect(page).toHaveTitle(/David/);
+        await expect(page).toHaveTitle(/Blog/);
     });
 
     test('there is pagination', async ({ page }) => {
