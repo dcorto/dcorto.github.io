@@ -21,7 +21,7 @@ This is my personal website. It is built with [HUGO](https://gohugo.io) using th
    ```
 5) Install nodejs
    ```
-   asdf nodejs install 22.17.0 && asdf sed nodejs 22.17.0
+   asdf nodejs install 22.17.0 && asdf set nodejs 22.17.0
    ```
 6) Install node modules
    ```
