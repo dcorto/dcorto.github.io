@@ -87,6 +87,8 @@
         function setGiscusTheme(theme) {
           const iframe = document.querySelector('iframe.giscus-frame');
           if (iframe) {
+            console.log("hello iframe " + theme)
+            
             iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: theme } } }, 'https://giscus.app');
           }
         }
@@ -94,6 +96,7 @@
         // Función que determina el tema actual del blog y se lo comunica a Giscus.
         function syncGiscusTheme() {
           const newTheme = document.documentElement.getAttribute('data-bs-theme');
+          console.log(newTheme + " > new theme")
           setGiscusTheme(newTheme);
         }
 
@@ -106,10 +109,15 @@
             if (giscusIframe) {
               // El iframe existe, pero su contenido de 'https://giscus.app' puede no estar cargado aún.
               // Esperamos al evento 'load' para asegurar que el origen del iframe es el correcto antes de enviar mensajes.
-              giscusIframe.addEventListener('load', () => {
+              giscusIframe.addEven
+              tListener('load', () => {
                 // Ahora que el iframe está completamente cargado, establecemos el tema inicial.
-                syncGiscusTheme();
-                
+                // Añadimos un pequeño retardo (50ms) para dar tiempo al script interno de Giscus
+                // a inicializar su listener de mensajes, aumentando la fiabilidad.
+                setTimeout(() => {
+                  syncGiscusTheme();
+                }, 1000);
+
                 // Y ahora observamos cambios en el tema del blog para mantener Giscus sincronizado.
                 new MutationObserver(syncGiscusTheme).observe(document.documentElement, { attributes: true, attributeFilter: ['data-bs-theme'] });
               });
