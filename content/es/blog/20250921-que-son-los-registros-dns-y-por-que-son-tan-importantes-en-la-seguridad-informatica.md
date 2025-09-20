@@ -8,8 +8,6 @@ tags:
     - dns
     - sistemas
     - ciberseguridad
-seo:
-  title: '¿Qué son los registros DNS y por qué son tan importantes en la seguridad informática?' 
 ---
 
 ![](/images/blog/20250921-que-son-los-registros-dns-y-por-que-son-tan-importantes-en-la-seguridad-informatica.jpeg "¿Qué son los registros DNS y por qué son tan importantes en la seguridad informática?")

@@ -21,12 +21,20 @@
 {{- end }}
 
 {{ if not .Params.seo.title }}
+  {{ if and (eq .Section "blog") (eq .Kind "page") }}
+<title>{{ .Title }} | Blog </title>
+  {{ else }}
 <title>{{ i18n "head_title" }}</title>
+  {{ end }}
 {{ else }}
 <title>{{ .Params.seo.title }}</title>
 {{ end }}
 {{ if not .Params.seo.description }}
+  {{ if and (eq .Section "blog") (eq .Kind "page") }}
+<meta name="description" content='{{ .Summary }}'>
+  {{ else }}
 <meta name="description" content='{{ i18n "head_description" }}'>
+  {{ end }}
 {{ else }}
 <meta name="description" content='{{ .Params.seo.description }}'>
 {{ end }}
