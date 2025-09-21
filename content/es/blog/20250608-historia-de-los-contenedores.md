@@ -36,3 +36,5 @@ Hoy en día, los contenedores son una pieza fundamental. Todos los principales p
 Además, el uso de contenedores ha puesto fin a la típica excusa de "en mi local funciona", al permitir entornos idénticos en todas las fases de desarrollo, pruebas y producción de aplicaciones y servicios.
 
 ¿Conocías los orígenes y evolución de los contenedores? ¡Te leo en los comentarios!
+
+Este artículo se publicó primero en [LinkedIn](https://www.linkedin.com/posts/davidcortocamacho_contenedores-docker-kubernetes-activity-7337403016716677120-tiKL/)

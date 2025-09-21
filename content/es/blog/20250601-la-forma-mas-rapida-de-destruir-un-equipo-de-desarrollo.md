@@ -46,3 +46,5 @@ Las revisiones de código no tratan de demostrar lo inteligente que eres, tratan
 📢¿Y vosotros usáis algún método para dejar comentarios o habéis recibido algún comentario polémico?
 
 ¡Os leo en los comentarios! 👇
+
+Este artículo se publicó primero en [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7334866329088212993/)
