@@ -13,7 +13,7 @@ tags:
 ![](/images/blog/20250928-el-futuro-energetico-de-la-ia.jpeg "El futuro energético de la IA")
 
 ¿Estamos preparados para el coste energético de la próxima revolución tecnológica? El futuro de la inteligencia 
-artificial está intrínsecamente ligado a la capacidad de generar y gestionar la energía de manera eficiente y asequible
+artificial está intrínsecamente ligado a la capacidad de generar y gestionar la energía de manera eficiente y asequible.
 
 El artículo de Enrique Dans, https://www.enriquedans.com/2025/09/el-proximo-cuello-de-botella-de-la-inteligencia-artificial-es-la-electricidad-barata.html, explica que el próximo gran desafío para el desarrollo de la inteligencia artificial no será la capacidad de los modelos o los algoritmos, sino el acceso a electricidad barata y sostenible.
 
