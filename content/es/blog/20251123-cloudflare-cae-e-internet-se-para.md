@@ -22,7 +22,7 @@ sin memoria y empezarón a fallar en cascada, el equipo de respuesta asumió un 
 Servicio Distribuido (DDoS) debido al patrón de tráfico anómalo. La realidad fue un **auto-sabotaje** operativo. 
 
 Cuando se dierón cuenta del error, la configuración maliciosa ya se había aplicado en la mayoría de sus sistemas, 
-por lo que al empezar a mitigiar el problema, les demoro unas horas en tener todos los sistemas restablecidos con la 
+por lo que al empezar a mitigar el problema, les demoro unas horas en tener todos los sistemas restablecidos con la 
 configuración correcta.
 
 Una vez más, queda patente lo frágil que es nuestro sistema tecnológico e hiperconectado. La dependencia de pocos 
