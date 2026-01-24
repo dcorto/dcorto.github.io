@@ -6,7 +6,7 @@ on:
     branches: [ master ]
 env:
   CI: true
-  HUGO_VERSION: 0.153.5
+  HUGO_VERSION: 0.154.5
 
 jobs:
   prepare:
