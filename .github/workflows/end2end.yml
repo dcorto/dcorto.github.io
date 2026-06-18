@@ -10,7 +10,7 @@ env:
 
 jobs:
   prepare:
-    timeout-minutes: 60
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
