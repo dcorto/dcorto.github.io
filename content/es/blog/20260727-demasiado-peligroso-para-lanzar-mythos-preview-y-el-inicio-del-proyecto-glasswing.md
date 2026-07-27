@@ -1,7 +1,7 @@
 ---
 title: 'Demasiado peligroso para lanzarse: Mythos Preview y el inicio del Proyecto Glasswing'
 slug: 'demasiado-peligroso-para-lanzar-mythos-preview-y-el-inicio-del-proyecto-glasswing'
-date: 2026-07-27T04:00:04+02:00
+date: 2026-07-27T08:00:00+02:00
 draft: false
 type: 'blog'
 tags:
