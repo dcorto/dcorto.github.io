@@ -7,6 +7,7 @@ on:
     branches: ["master"]
   schedule:
     - cron: "0 8 * * 0" # every sunday at 8:00 AM (UTC)
+  workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
