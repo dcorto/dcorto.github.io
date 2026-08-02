@@ -112,3 +112,17 @@ article.post.summary h2, article.post.summary .h2 {
     background-color: #6897bb;
     color: #fff;
 }
+
+/* footer styles */
+.footer__buymeapizza .buymeapizza-btn img {
+    height: 38px;
+    width: auto;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    border-radius: 8px;
+}
+
+.footer__buymeapizza .buymeapizza-btn:hover img {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+

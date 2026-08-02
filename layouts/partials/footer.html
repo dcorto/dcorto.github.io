@@ -1,0 +1,51 @@
+<footer class="footer w-100 py-4">
+  <div class="container">
+    <div class="container-fluid">
+      <div class="row w-100 align-items-center gy-3">
+        <div class="footer_left col-12 col-md-4 text-center text-md-start">
+          <div class="footer__copy mb-2">
+            <span>{{ i18n "footer_notice" | safeHTML }}</span>
+          </div>
+          <div class="footer__buymeapizza mt-2">
+            <a href="https://www.buymeacoffee.com/davidcorto" target="_blank" rel="noopener noreferrer" class="buymeapizza-btn">
+              <img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20pizza&emoji=🍕&slug=davidcorto&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" alt="Buy me a Pizza" />
+            </a>
+          </div>
+        </div>
+        <div class="footer_links col-12 col-md-5 text-center text-md-end">
+          <ul class="navbar-nav w-100 align-items-center justify-content-center justify-content-md-end d-flex flex-row flex-nowrap gap-3">
+            <li class="nav-item">
+              <a class="nav-link px-1 text-nowrap" href="{{ .Site.BaseURL | relLangURL }}"
+                >🏠 HOME</a
+              >
+            </li>
+            {{ range .Site.Menus.footer }}
+            <li class="nav-item">
+              <a class="nav-link px-1 text-nowrap" href="{{ .URL | relURL }}"
+                >{{ .Name | upper }}</a
+              >
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+        <div class="footer_right col-12 col-md-3 text-center text-md-end">
+          <div class="d-flex flex-wrap justify-content-center justify-content-md-end align-items-center gap-3">
+            {{- if hugo.IsMultilingual }} 
+            {{- if not .Site.Params.languages.selector.disable.footer }}
+            {{ .Scratch.Set "selectorPlacement" "footer" }}
+            {{ partial "selector-language.html" . }}
+            {{- end }} 
+            {{- end }}
+            
+            {{- if not .Site.Params.colorTheme.selector.disable.footer }}
+            {{ .Scratch.Set "selectorPlacement" "footer" }}
+            {{ partial "selector-theme.html" . }}
+            {{- end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
