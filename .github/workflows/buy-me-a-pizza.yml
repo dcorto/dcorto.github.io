@@ -6,14 +6,18 @@ on:
     # Runs at every Sunday 12AM UTC
     - cron: "0 0 * * 0"
 
+permissions:
+  contents: write
+
 jobs:
   bmac-readme:
     name: Update Buy Me A Pizza section in this repo's README
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v4
       - uses: akosbalasko/coffee-readme@main
         with:
           BUY_ME_A_COFFEE_TOKEN: ${{ secrets.BUY_ME_A_COFFEE_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
