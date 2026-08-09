@@ -37,6 +37,7 @@ This is my personal website. It is built with [HUGO](https://gohugo.io) using th
 
 ### Donators: THANKS!
 <!--START_COFFEE-->
+- **Mister X** bought 1 🍕
 <!--END_COFFEE-->
 
 
