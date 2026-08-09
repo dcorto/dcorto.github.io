@@ -15,11 +15,92 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: akosbalasko/coffee-readme@main
-        with:
+
+      - name: Fetch supporters and update README
+        env:
           BUY_ME_A_COFFEE_TOKEN: ${{ secrets.BUY_ME_A_COFFEE_TOKEN }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: master
+        run: |
+          node -e '
+          const fs = require("fs");
+          const https = require("https");
+
+          const token = process.env.BUY_ME_A_COFFEE_TOKEN;
+          if (!token) {
+            console.error("BUY_ME_A_COFFEE_TOKEN is missing!");
+            process.exit(1);
+          }
+
+          const options = {
+            hostname: "developers.buymeacoffee.com",
+            path: "/api/v1/supporters",
+            headers: {
+              "Authorization": `Bearer ${token}`
+            }
+          };
+
+          https.get(options, (res) => {
+            let data = "";
+            res.on("data", (chunk) => data += chunk);
+            res.on("end", () => {
+              console.log("Status code:", res.statusCode);
+              console.log("Raw API Response:", data);
+
+              let json;
+              try {
+                json = JSON.parse(data);
+              } catch (e) {
+                console.error("Failed to parse JSON response:", e);
+                process.exit(1);
+              }
+
+              const supporters = (json && json.data && Array.isArray(json.data)) ? json.data : [];
+              console.log(`Found ${supporters.length} supporters.`);
+
+              let content = "";
+              if (supporters.length === 0) {
+                content = "No supporters yet! Be the first 🍕";
+              } else {
+                content = supporters.slice(0, 5).map(s => {
+                  const name = s.supporter_name || "Anonymous";
+                  const coffee = s.support_coffee_times || 1;
+                  const message = s.support_note || s.support_message || "";
+                  return `- **${name}** bought ${coffee} 🍕${message ? `: "${message}"` : ""}`;
+                }).join("\n");
+              }
+
+              const readmePath = "README.md";
+              let readme = fs.readFileSync(readmePath, "utf8");
+
+              const regex = /<!--START_COFFEE-->[\s\S]*?<!--END_COFFEE-->/g;
+              const newContent = `<!--START_COFFEE-->\n${content}\n<!--END_COFFEE-->`;
+
+              if (!regex.test(readme)) {
+                console.error("Could not find <!--START_COFFEE--> tags in README.md");
+                process.exit(1);
+              }
+
+              readme = readme.replace(regex, newContent);
+              fs.writeFileSync(readmePath, readme);
+              console.log("README.md updated successfully!");
+            });
+          }).on("error", (err) => {
+            console.error("API Request error:", err);
+            process.exit(1);
+          });
+          '
+
+      - name: Commit & Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "docs: update Buy Me A Pizza supporters section"
+            git push origin master
+          fi
+
 
 
 
