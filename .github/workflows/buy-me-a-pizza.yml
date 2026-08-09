@@ -14,86 +14,133 @@ jobs:
     name: Update Buy Me A Pizza section in this repo's README
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Fetch supporters and update README
+      - name: Fetch supporters and update README via API
         env:
           BUY_ME_A_COFFEE_TOKEN: ${{ secrets.BUY_ME_A_COFFEE_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           node -e '
-          const fs = require("fs");
           const https = require("https");
 
-          const token = process.env.BUY_ME_A_COFFEE_TOKEN;
-          if (!token) {
+          const bmcToken = process.env.BUY_ME_A_COFFEE_TOKEN;
+          const ghToken = process.env.GH_TOKEN;
+          const repo = process.env.GITHUB_REPOSITORY;
+          const path = "README.md";
+
+          if (!bmcToken) {
             console.error("BUY_ME_A_COFFEE_TOKEN is missing!");
             process.exit(1);
           }
 
-          const options = {
-            hostname: "developers.buymeacoffee.com",
-            path: "/api/v1/supporters",
-            headers: {
-              "Authorization": `Bearer ${token}`
-            }
-          };
-
-          https.get(options, (res) => {
-            let data = "";
-            res.on("data", (chunk) => data += chunk);
-            res.on("end", () => {
-              console.log("Status code:", res.statusCode);
-              console.log("Raw API Response:", data);
-
-              let json;
-              try {
-                json = JSON.parse(data);
-              } catch (e) {
-                console.error("Failed to parse JSON response:", e);
-                process.exit(1);
-              }
-
-              const supporters = (json && json.data && Array.isArray(json.data)) ? json.data : [];
-              console.log(`Found ${supporters.length} supporters.`);
-
-              let content = "";
-              if (supporters.length === 0) {
-                content = "No supporters yet! Be the first 🍕";
-              } else {
-                content = supporters.slice(0, 5).map(s => {
-                  const name = s.supporter_name || "Anonymous";
-                  const coffee = s.support_coffee_times || 1;
-                  const message = s.support_note || s.support_message || "";
-                  return `- **${name}** bought ${coffee} 🍕${message ? `: "${message}"` : ""}`;
-                }).join("\n");
-              }
-
-              const readmePath = "README.md";
-              let readme = fs.readFileSync(readmePath, "utf8");
-
-              const regex = /<!--START_COFFEE-->[\s\S]*?<!--END_COFFEE-->/g;
-              const newContent = `<!--START_COFFEE-->\n${content}\n<!--END_COFFEE-->`;
-
-              if (!regex.test(readme)) {
-                console.error("Could not find <!--START_COFFEE--> tags in README.md");
-                process.exit(1);
-              }
-
-              readme = readme.replace(regex, newContent);
-              fs.writeFileSync(readmePath, readme);
-              console.log("README.md updated successfully!");
+          function request(url, options, body) {
+            return new Promise((resolve, reject) => {
+              const req = https.request(url, options, (res) => {
+                let data = "";
+                res.on("data", chunk => data += chunk);
+                res.on("end", () => {
+                  let parsed = {};
+                  try { parsed = JSON.parse(data || "{}"); } catch (e) { parsed = data; }
+                  resolve({ status: res.statusCode, body: parsed, raw: data });
+                });
+              });
+              req.on("error", reject);
+              if (body) req.write(JSON.stringify(body));
+              req.end();
             });
-          }).on("error", (err) => {
-            console.error("API Request error:", err);
+          }
+
+          async function main() {
+            // 1. Fetch supporters from Buy Me A Coffee API
+            console.log("Fetching supporters from Buy Me a Coffee...");
+            const bmcRes = await request("https://developers.buymeacoffee.com/api/v1/supporters", {
+              headers: { "Authorization": `Bearer ${bmcToken}` }
+            });
+
+            console.log("BMC API Status:", bmcRes.status);
+            console.log("BMC API Payload:", JSON.stringify(bmcRes.body));
+
+            const json = bmcRes.body;
+            const supporters = (json && json.data && Array.isArray(json.data)) ? json.data : [];
+            console.log(`Found ${supporters.length} supporters.`);
+
+            let supportersText = "";
+            if (supporters.length === 0) {
+              supportersText = "No supporters yet! Be the first 🍕";
+            } else {
+              supportersText = supporters.slice(0, 5).map(s => {
+                const name = s.supporter_name || "Anonymous";
+                const coffee = s.support_coffee_times || 1;
+                const message = s.support_note || s.support_message || "";
+                return `- **${name}** bought ${coffee} 🍕${message ? `: "${message}"` : ""}`;
+              }).join("\n");
+            }
+
+            // 2. Fetch current README.md from GitHub API
+            console.log("Fetching current README.md from GitHub...");
+            const ghFileRes = await request(`https://api.github.com/repos/${repo}/contents/${path}?ref=master`, {
+              headers: {
+                "Authorization": `token ${ghToken}`,
+                "User-Agent": "Node-GitHub-Action",
+                "Accept": "application/vnd.github.v3+json"
+              }
+            });
+
+            if (ghFileRes.status !== 200) {
+              console.error("Failed to fetch README.md from GitHub:", ghFileRes.status, ghFileRes.body);
+              process.exit(1);
+            }
+
+            const currentSha = ghFileRes.body.sha;
+            const oldContent = Buffer.from(ghFileRes.body.content, "base64").toString("utf8");
+
+            // 3. Update section
+            const regex = /<!--START_COFFEE-->[\s\S]*?<!--END_COFFEE-->/g;
+            const newSection = `<!--START_COFFEE-->\n${supportersText}\n<!--END_COFFEE-->`;
+
+            if (!regex.test(oldContent)) {
+              console.error("Could not find <!--START_COFFEE--> tags in README.md");
+              process.exit(1);
+            }
+
+            const updatedContent = oldContent.replace(regex, newSection);
+
+            if (updatedContent === oldContent) {
+              console.log("README content has not changed. Skipping commit.");
+              return;
+            }
+
+            // 4. Push updated README back via GitHub REST API (Signed commit)
+            console.log("Updating README.md via GitHub API...");
+            const putRes = await request(`https://api.github.com/repos/${repo}/contents/${path}`, {
+              method: "PUT",
+              headers: {
+                "Authorization": `token ${ghToken}`,
+                "User-Agent": "Node-GitHub-Action",
+                "Accept": "application/vnd.github.v3+json",
+                "Content-Type": "application/json"
+              }
+            }, {
+              message: "docs: update Buy Me A Pizza supporters section [signed]",
+              content: Buffer.from(updatedContent).toString("base64"),
+              sha: currentSha,
+              branch: "master"
+            });
+
+            if (putRes.status === 200 || putRes.status === 201) {
+              console.log("Successfully committed and signed via GitHub API!");
+            } else {
+              console.error("Error committing via API:", putRes.status, putRes.body);
+              process.exit(1);
+            }
+          }
+
+          main().catch(err => {
+            console.error("Fatal Error:", err);
             process.exit(1);
           });
           '
 
-      - name: Commit & Push changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "docs: update Buy Me A Pizza supporters section"
-          file_pattern: "README.md"
+
 
 
 
