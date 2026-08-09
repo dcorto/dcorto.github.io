@@ -57,7 +57,7 @@ jobs:
             });
 
             console.log("BMC API Status:", bmcRes.status);
-            console.log("BMC API Payload:", JSON.stringify(bmcRes.body));
+
 
             const json = bmcRes.body;
             const supporters = (json && json.data && Array.isArray(json.data)) ? json.data : [];
