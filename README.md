@@ -37,4 +37,5 @@ This is my personal website. It is built with [HUGO](https://gohugo.io) using th
 
 ### Donators: THANKS!
 <!--START_SECTION:buy-me-a-coffee-->
-<!--END_SECTION:buy-me-a-coffe-->
+<!--END_SECTION:buy-me-a-coffee-->
+

@@ -11,7 +11,9 @@ jobs:
     name: Update Buy Me A Pizza section in this repo's README
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - uses: akosbalasko/coffee-readme@main
         with:
           BUY_ME_A_COFFEE_TOKEN: ${{ secrets.BUY_ME_A_COFFEE_TOKEN }}
-          GH_TOKEN: ${{secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
